@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "scope": "Local export integrity, credential-pattern scan and scientific report replay; no new accelerator measurements.",
+  "manifest_sha256": "c8a53b3ab6fa8b6fcbd909c59c962de42fe50a2be51e5861debee1ccfe5049fb",
+  "source_commit": "a51438948c7ad81dc7e1fbd92cc1e4e4298695cd"
+}

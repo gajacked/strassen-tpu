@@ -1,0 +1,8 @@
+{
+  "archive_sha256": "708c3bd49f7fc8f3f2ec59f5453498ed7489ace90682542d92e53df88665d6da",
+  "files": {
+    "tools/scan_public_checkpoint_v001.py": "bb56161394dba977e4d4e1d44ecda6381928ec4d12296f8f74d82dd5dd1c4812",
+    "tools/validate_public_checkpoint_v001.py": "9ef537586e590c99ca8d41e1bb326458c78fd42139b33a7fc2b010928ebd4385"
+  },
+  "source_commit": "68fe70a3f92db523fa88ffcc47b7369d52cb9521"
+}

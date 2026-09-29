@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "files": 1255,
+  "v6e_complete_pairs": 113,
+  "v6e_phase_members": 118273,
+  "full_study_complete": false,
+  "report_replay": "passed",
+  "scientific_fields": "identical",
+  "candidate_ledger": "byte_identical",
+  "policy": "byte_identical",
+  "precision_groups": 226,
+  "numpy_version": "2.3.5"
+}
