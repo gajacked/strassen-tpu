@@ -1,0 +1,180 @@
+{
+  "by_output": {
+    "bfloat16": {
+      "frozen_policy_recommendations": {
+        "native": 95,
+        "s1": 18
+      },
+      "methods": {
+        "cubic": {
+          "eligible": 113,
+          "relative_l2_max": 0.0027871939736346515,
+          "relative_l2_median": 0.001669986441294608,
+          "vs_cubic": {
+            "inconclusive": 113
+          },
+          "vs_tuned_native": {
+            "inconclusive": 40,
+            "loss": 57,
+            "win": 16
+          }
+        },
+        "native": {
+          "eligible": 113,
+          "relative_l2_max": 0.0027871939736346515,
+          "relative_l2_median": 0.001669986441294578,
+          "vs_cubic": {
+            "inconclusive": 40,
+            "loss": 16,
+            "win": 57
+          },
+          "vs_tuned_native": {
+            "inconclusive": 113
+          }
+        },
+        "native_default": {
+          "eligible": 113,
+          "relative_l2_max": 0.0027871939736346515,
+          "relative_l2_median": 0.001669986441294578,
+          "vs_cubic": {
+            "inconclusive": 33,
+            "loss": 28,
+            "win": 52
+          },
+          "vs_tuned_native": {
+            "inconclusive": 75,
+            "loss": 36,
+            "win": 2
+          }
+        },
+        "s1": {
+          "eligible": 113,
+          "relative_l2_max": 0.004833751695622651,
+          "relative_l2_median": 0.00470116333836755,
+          "vs_cubic": {
+            "inconclusive": 54,
+            "loss": 9,
+            "win": 50
+          },
+          "vs_tuned_native": {
+            "inconclusive": 42,
+            "loss": 49,
+            "win": 22
+          }
+        },
+        "s2": {
+          "eligible": 113,
+          "relative_l2_max": 0.010193539863700278,
+          "relative_l2_median": 0.00991839901760228,
+          "vs_cubic": {
+            "inconclusive": 29,
+            "loss": 74,
+            "win": 10
+          },
+          "vs_tuned_native": {
+            "inconclusive": 25,
+            "loss": 84,
+            "win": 4
+          }
+        }
+      },
+      "shapes": 113
+    },
+    "float32": {
+      "frozen_policy_recommendations": {
+        "cubic": 1,
+        "native": 99,
+        "s1": 13
+      },
+      "methods": {
+        "cubic": {
+          "eligible": 113,
+          "relative_l2_max": 2.2526304054278613e-07,
+          "relative_l2_median": 9.363849942299309e-08,
+          "vs_cubic": {
+            "inconclusive": 113
+          },
+          "vs_tuned_native": {
+            "inconclusive": 44,
+            "loss": 63,
+            "win": 6
+          }
+        },
+        "native": {
+          "eligible": 113,
+          "relative_l2_max": 4.183622828247184e-07,
+          "relative_l2_median": 9.462278785412504e-08,
+          "vs_cubic": {
+            "inconclusive": 44,
+            "loss": 6,
+            "win": 63
+          },
+          "vs_tuned_native": {
+            "inconclusive": 113
+          }
+        },
+        "native_default": {
+          "eligible": 113,
+          "relative_l2_max": 4.42345832981253e-07,
+          "relative_l2_median": 9.462278785412504e-08,
+          "vs_cubic": {
+            "inconclusive": 40,
+            "loss": 15,
+            "win": 58
+          },
+          "vs_tuned_native": {
+            "inconclusive": 79,
+            "loss": 29,
+            "win": 5
+          }
+        },
+        "s1": {
+          "eligible": 113,
+          "relative_l2_max": 0.004531569348183358,
+          "relative_l2_median": 0.004393991760440711,
+          "vs_cubic": {
+            "inconclusive": 66,
+            "loss": 6,
+            "win": 41
+          },
+          "vs_tuned_native": {
+            "inconclusive": 40,
+            "loss": 53,
+            "win": 20
+          }
+        },
+        "s2": {
+          "eligible": 113,
+          "relative_l2_max": 0.010174402169057841,
+          "relative_l2_median": 0.009780822545567619,
+          "vs_cubic": {
+            "inconclusive": 33,
+            "loss": 72,
+            "win": 8
+          },
+          "vs_tuned_native": {
+            "inconclusive": 24,
+            "loss": 86,
+            "win": 3
+          }
+        }
+      },
+      "shapes": 113
+    }
+  },
+  "case_status_counts": {
+    "confirm": {
+      "ok": 9945,
+      "oom": 60
+    },
+    "screen": {
+      "ok": 44444,
+      "oom": 2695
+    }
+  },
+  "finished_utc": "2026-09-29T21:05:15.000100+00:00",
+  "interim": true,
+  "planned_shapes": 168,
+  "started_utc": "2026-09-29T21:00:51.864759+00:00",
+  "verified_shapes": 113
+}
