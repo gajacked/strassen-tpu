@@ -1,21 +1,21 @@
 {
-  "action": "paused-user",
+  "action": "measuring",
   "created_utc": "2026-09-27T21:41:33.658098+00:00",
   "current_cohort": null,
-  "finished": false,
+  "finished": true,
   "hardware": "v6e",
-  "pending_request": {
-    "path": "/Users/bagheera/Documents/ChatGPT/Faster Strassen TPU/Strassen_MM_Focus/runs/20260927-arch-supervised-v001/allocation-request-strassen-auto-v6e-0929-162508.json",
-    "epoch": 1790699108.618179,
-    "session": "strassen-auto-v6e-0929-162508"
-  },
+  "pending_request": null,
   "runtime": null,
   "source_commit": "0175200465e614578c415f5f0dd2a1a43032c392",
   "allocation_requests": [
-    1790696106.221246,
-    1790697107.450591,
-    1790698107.057315,
-    1790699108.618179
+    1790870400.5422678
   ],
-  "detail": "User confirmed exhausted Colab credits; paused until a new account is ready and explicitly reauthenticated."
+  "detail": "New Google account authenticated by owner; old-account pending allocation and cached sessions privately separated.",
+  "runtime_needs_release": false,
+  "account_transition": "runs/20260927-arch-supervised-v001/account-transition-20260930-v001",
+  "completed_hardware": [
+    "v6e"
+  ],
+  "stop_reason": "user_requested_stop_after_v6e",
+  "automatic_followups": []
 }

@@ -1,5 +1,6 @@
 {
-  "automation_state": "PAUSED",
+  "automatic_followups": [],
+  "automation_state": "DELETED",
   "historical_v5e": {
     "completed_shapes": 168,
     "matched_to_new_protocol": false,
@@ -8,25 +9,25 @@
   "new_v5e": {
     "completed_shapes": 0,
     "policy": "Original v5e kernels/tuning plus timed BF16 output; no v6e tuning transplant.",
-    "state": "not_started"
+    "state": "deferred_not_queued"
   },
   "omitted_duplicates": [
     "per-phase remote copies of artifacts already retained",
     "per-phase nested source archives (one frozen source archive per cohort retained)",
-    "older interim reports superseded by the 113-shape report",
+    "older interim reports superseded by the final 168-shape report",
     "ephemeral process lock files and local Python environments"
   ],
   "owned_tpu": null,
   "parent_repository": "https://github.com/sarsid/strassen-tpu",
-  "reason": "Colab credits exhausted; new account/authentication deferred by user.",
-  "resume_requires_reauthentication": true,
-  "saved_utc": "2026-09-29T21:13:26.897688+00:00",
+  "reason": "All 168 v6e shapes verified and committed; owned TPU released and recovery monitor deleted.",
+  "resume_requires_reauthentication": false,
+  "saved_utc": "2026-10-02T14:36:39.374660+00:00",
   "schema_version": 1,
-  "source_commit": "a51438948c7ad81dc7e1fbd92cc1e4e4298695cd",
+  "source_commit": "cc80ef32d8d1b1135fe7349fe34d5e321f858f8c",
   "source_scope": "Committed research source; historical modules retained without authorizing new depth-3/4 runs.",
-  "state": "paused_by_user",
+  "state": "completed",
   "v6e": {
-    "completed_shapes": 113,
+    "completed_shapes": 168,
     "completed_units": [
       "arch-001",
       "arch-002",
@@ -140,13 +141,6 @@
       "arch-110",
       "arch-111",
       "arch-112",
-      "arch-131"
-    ],
-    "full_study_complete": false,
-    "interrupted_unit": "arch-113",
-    "planned_shapes": 168,
-    "precision_groups": 226,
-    "remaining_units": [
       "arch-113",
       "arch-114",
       "arch-115",
@@ -165,6 +159,7 @@
       "arch-128",
       "arch-129",
       "arch-130",
+      "arch-131",
       "arch-132",
       "arch-133",
       "arch-134",
@@ -203,6 +198,11 @@
       "arch-167",
       "arch-168"
     ],
+    "full_study_complete": true,
+    "interrupted_unit": null,
+    "planned_shapes": 168,
+    "precision_groups": 336,
+    "remaining_units": [],
     "report": "results/v6e/report/SUMMARY.md"
   }
 }

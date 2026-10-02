@@ -1,5 +1,21 @@
 # v6e 168 shapes: joint tuning, FP32 and BF16 output
 
+## Completed October 2, 2026
+
+All 168 geometries are complete in both output precisions: 336 precision
+groups with default Native, tuned Native, tuned cubic, S1 and S2. The phase
+archives, tuning choices, timing samples and numerical errors are committed.
+The combined report is [RESULTS.md](report/RESULTS.md), the tuner rationale is
+[TUNER_DESIGN.md](report/TUNER_DESIGN.md), and [COMPLETE.json](COMPLETE.json)
+records full coverage and the final results checksum.
+
+The owned TPU has been released and verified absent. The supervisor finished
+and its recovery heartbeat was deleted. No subsequent experiments are queued.
+These final results are committed in the local research repository; the
+earlier GitHub benchmark publication has not yet been updated to this snapshot.
+
+The dated checkpoints below are retained as historical evidence.
+
 Status as of 2026-09-27 00:30 UTC: running. Hardware qualification passed
 72/72 exact cases. The first shape has completed both output contracts;
 the boundary preflight is screening. This text is a timestamped checkpoint,

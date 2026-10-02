@@ -1,13 +1,13 @@
-# Publication verification
+# Final publication verification
 
-All checks passed on September 29, 2026. No TPU was used.
+All checks passed on October 2, 2026. Validation used CPU only.
 
-- 113 complete screen/confirm pairs, 226 separate output comparisons.
-- 1,255 original export files and 118,273 canonical v6e archive members verified.
-- Rebuilt scientific fields and paired confidence intervals exactly match the saved report.
+- 168 complete screen/confirmation pairs and 336 separate output comparisons.
+- 1,423 original export files and 195,645 canonical v6e archive members verified.
+- Rebuilt scientific fields and paired confidence intervals exactly match the final report.
 - Candidate ledger and frozen tuning policy are byte-identical after replay.
-- Targeted credential-pattern scan found no matches across 127,120 payloads, including nested archives (4.42 GB uncompressed). This is not a proof that arbitrary data is secret-free.
+- Targeted credential-pattern scan found no matches across 207,498 payloads, including nested archives (6,716,374,223 uncompressed bytes). This is not a general proof that arbitrary data is secret-free.
 
-Replay used NumPy 2.3.5. The report can be rebuilt with `python replay.py` from the benchmarks root.
+Replay used NumPy 2.3.5. Run `python replay.py` from the benchmarks root to reproduce it.
 
-`checked-content-MANIFEST.json` is the exact original export manifest checked by the recorded validation. `validation.json` records its SHA-256. The current root manifest additionally covers these validation receipts and this note; the scientific files are unchanged. Historical source paths/commits in the validation source manifest identify the original local validation execution.
+`checked-content-MANIFEST.json` is the exact export manifest checked by this validation. `validation.json` records its SHA-256. The current root manifest additionally includes these receipts and this note; all scientific files are unchanged. Source paths and commits in the validation manifest identify the archived local validation execution.

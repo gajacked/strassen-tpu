@@ -2,32 +2,32 @@
   "compressed_reports": [
     {
       "file": "results/v6e/report/candidate_decisions.json.gz",
-      "uncompressed_bytes": 509150474,
-      "uncompressed_sha256": "4d0098d1b185990dacd0a7b64113be0d00c698549e37ef7e74cd0e387b21a3c0"
+      "uncompressed_bytes": 801270807,
+      "uncompressed_sha256": "f4f94e7a804c17562e983dd7d2d682cbb186597612aea987c3b789d7d458a478"
     },
     {
       "file": "results/v6e/report/results.json.gz",
-      "uncompressed_bytes": 22145543,
-      "uncompressed_sha256": "ae74b94b679c9cbb687c69d92890254d2c178b0be1b14d5f128321a7ae2d48e3"
+      "uncompressed_bytes": 32687096,
+      "uncompressed_sha256": "9309ff93eaec5415c455bd1c33ba2a6a57b7daebae2b2a7f60d052f2eadfd7b0"
     }
   ],
   "export_complete": true,
   "files": {
     "README.md": {
-      "bytes": 5558,
-      "sha256": "225b4ab2c3d378f01bfce654affd46be10156eed29b3e1f76bd117ab587626a5"
+      "bytes": 5116,
+      "sha256": "84a5792e1316b6a07291887312ebeb14b10c2b336dd507e190603c293d43dd73"
     },
     "RESUME.md": {
-      "bytes": 3157,
-      "sha256": "cc6a91b95400918fcaadf28627567971f43d29e90693507da0e4a6671c3c87d7"
+      "bytes": 228,
+      "sha256": "796a58202c81865b599ff3e04f3c18248eab9624bcdc2d0499f149392d98a5ff"
     },
     "checkpoint.json": {
-      "bytes": 4431,
-      "sha256": "19f6b1e814ab6caa1af8e2af88a858e72d5391b93cce7122c5df2bc58023011b"
+      "bytes": 4482,
+      "sha256": "012c067591fed6efbb4da9067d3003e926551ceff89fd1b5a6dd8fbba02e7cf1"
     },
     "code/AGENTS.md": {
-      "bytes": 1298,
-      "sha256": "68cc6d43a45fcaf3a94839796f3d54aa812facc1112db2c22813a26b684435e5"
+      "bytes": 4100,
+      "sha256": "05e67879be6eb0f3762ce4e4885466dbb88be0f109aca4b2ebb2759168bcbb7a"
     },
     "code/README.md": {
       "bytes": 3170,
@@ -46,8 +46,8 @@
       "sha256": "3b31e30098e8b9acc30d897a8d546b64f3871d6f8b8278d5bb82acd392c3ef3b"
     },
     "code/TODO.md": {
-      "bytes": 1966,
-      "sha256": "e5ea52dcb597b466b198ca2b29abec71a9d7e7e462beecaebe8848ff081fd5a4"
+      "bytes": 896,
+      "sha256": "a7af2c541dada2e5f6dd47a48e10f03928fcff430b52ef7c37fa70b5c0fd0324"
     },
     "code/configs/alphatensor_poc_v001/campaign.json": {
       "bytes": 5737,
@@ -509,6 +509,10 @@
       "bytes": 2953,
       "sha256": "0cf0fcfc1068e043d7aa5a3e21778ac97767a98860c7782a7850647d40aee33a"
     },
+    "code/docs/AUTOMATIC_ARCH_RECOVERY_v002.md": {
+      "bytes": 1449,
+      "sha256": "88a3e650720a9114c1973060e37f82c86cd27a9592fdee421fef9005e2b360e6"
+    },
     "code/docs/CHARTS_EXPLAINED_v001.md": {
       "bytes": 2569,
       "sha256": "0872776de0f9e7b83436791a58348b1b24e6e98338dfd94410afa7753abad533"
@@ -625,6 +629,10 @@
       "bytes": 5558,
       "sha256": "225b4ab2c3d378f01bfce654affd46be10156eed29b3e1f76bd117ab587626a5"
     },
+    "code/docs/PUBLIC_BENCHMARK_FINAL_20261002_v001.md": {
+      "bytes": 5116,
+      "sha256": "84a5792e1316b6a07291887312ebeb14b10c2b336dd507e190603c293d43dd73"
+    },
     "code/docs/PUBLIC_BENCHMARK_RESUME_20260929_v001.md": {
       "bytes": 3157,
       "sha256": "cc6a91b95400918fcaadf28627567971f43d29e90693507da0e4a6671c3c87d7"
@@ -640,6 +648,10 @@
     "code/docs/RESEARCH_SEQUENCE_v001.md": {
       "bytes": 11695,
       "sha256": "9c5e56bffb96e368b97a48cecdddd3af27b8651dba5a0026b854515c4b960bf7"
+    },
+    "code/docs/RESEARCH_SEQUENCE_v002.md": {
+      "bytes": 3712,
+      "sha256": "d74cf243031614dd4f2471b028026a2bfd311a3d003d19021aeb4792a8087f1b"
     },
     "code/docs/STRASSEN_OPTIMIZED_BACKEND_NOTES_v001.md": {
       "bytes": 7245,
@@ -1309,6 +1321,10 @@
       "bytes": 779,
       "sha256": "9c481510705d1cf3ad8350f4b2be63e93c2c757535639ec1ec1c6a0a1990902e"
     },
+    "code/runtime/reauth_colab_account_v001.py": {
+      "bytes": 3549,
+      "sha256": "dc266b3e242ae7a6451042f0b8050c71eaf9c0f63ed20bccad09128d96fa3c3e"
+    },
     "code/runtime/release_allocation_v001.py": {
       "bytes": 1332,
       "sha256": "3a07a7f9c0ade726dbfd3880da0a2660af236f7600bcc2acfb27a41f2036ba61"
@@ -1336,6 +1352,10 @@
     "code/runtime/setup_v004.py": {
       "bytes": 6653,
       "sha256": "6876a2141a8ba510bcba65dac2b48dd1ef0baaf52be8dec0c55b0abee194bcf7"
+    },
+    "code/runtime/stop_owned_phase_v001.py": {
+      "bytes": 2331,
+      "sha256": "52a402b019c84ab3ec6b66c1d58fbea000208cfd754c9b0abe9dfef5f41dca81"
     },
     "code/runtime/validation_20260919T045300Z/README.md": {
       "bytes": 642,
@@ -2013,6 +2033,10 @@
       "bytes": 5064,
       "sha256": "2cc81a4f4518f90955dae2d94eb682f4e413ca3f8dce50d67d671277a227b4c8"
     },
+    "code/tools/activate_colab_account_v001.py": {
+      "bytes": 5671,
+      "sha256": "dc5b3d7cd55e7569a149b8fcf3c6222c39db8c163ff96c54debd55381c8872f1"
+    },
     "code/tools/analyze_arch_runtime_v001.py": {
       "bytes": 6654,
       "sha256": "18b9b270b18e986a65679e5624fe0fe87facbc2e85626c8d2e6416a76d22a7e4"
@@ -2145,6 +2169,14 @@
       "bytes": 5876,
       "sha256": "6bfbb40e44e1bfc2e8dc68b35b0ded63fe7862be4c6c033aa4985dfde26e2b90"
     },
+    "code/tools/check_arch_pause_boundary_v001.py": {
+      "bytes": 2259,
+      "sha256": "06bde9f86534fdeadec83ca95bbf085142762bfdcb472a20cf96fb782a0dfb8c"
+    },
+    "code/tools/check_arch_pause_boundary_v002.py": {
+      "bytes": 2257,
+      "sha256": "324af52f45f9df76888eb0c7e35e2f3c7b1476b465666370b64f1b45ea173f78"
+    },
     "code/tools/check_arch_progress_v001.py": {
       "bytes": 2790,
       "sha256": "681d3cd32f06fffdea525b4c323f57bcf9348398c85b8341eb22094ac5c3b0a0"
@@ -2176,6 +2208,10 @@
     "code/tools/check_arch_v5e_plan_v001.py": {
       "bytes": 2181,
       "sha256": "f1fb80f9f45173566b9477e7b5465d8bc06cbd46c592abe12bf9c13ea0ab7b56"
+    },
+    "code/tools/check_arch_v6e_stop_v001.py": {
+      "bytes": 5132,
+      "sha256": "01f59cc652b6614e439c6821ee60ccda65b2f40294c480cd51c37d3af373eb70"
     },
     "code/tools/check_fullk_v001.py": {
       "bytes": 2662,
@@ -2457,6 +2493,10 @@
       "bytes": 11747,
       "sha256": "c08de9ea5b08383970277548e6994afd2b5b3c79082fc3adfad0839a0c266de9"
     },
+    "code/tools/export_public_checkpoint_v003.py": {
+      "bytes": 14406,
+      "sha256": "84eb83ab4087216d90c758fee3cb862d5c031053ebe4cf3878fc5cadd7e6449f"
+    },
     "code/tools/export_v5e_results_v001.py": {
       "bytes": 14206,
       "sha256": "1b333e51be00b77200803830bef5242ff9d86b5003e4d6f895a6fc9784d859db"
@@ -2516,6 +2556,14 @@
     "code/tools/migrate_arch_supervisor_v001.py": {
       "bytes": 4246,
       "sha256": "741f5f8ab86dca4cf71397505f288eabbe629b4f9d082eee2343695f7dd48ef8"
+    },
+    "code/tools/migrate_arch_supervisor_v002.py": {
+      "bytes": 5126,
+      "sha256": "7537b09f654082834f3cdaacc991a4c1e3b2fe4d10b18ad3940d07f98b31f4f4"
+    },
+    "code/tools/pause_arch_boundary_v001.py": {
+      "bytes": 9275,
+      "sha256": "6e7700f85cbf011137a900aee821719fa30fabdcbcd95811faf87d496bd2410d"
     },
     "code/tools/plot_experiments_v001.py": {
       "bytes": 52282,
@@ -2760,6 +2808,10 @@
     "code/tools/replay_public_checkpoint_v001.py": {
       "bytes": 3844,
       "sha256": "96657da6f32e8ba0891e3d770d13959e853af7203489551566cc50a8a512e2d9"
+    },
+    "code/tools/replay_public_checkpoint_v002.py": {
+      "bytes": 3845,
+      "sha256": "c41f8aab9dc1b26cb72ed3c566c83de3d4ab58c5aacb45a330db83d99cadf51e"
     },
     "code/tools/report_alphatensor_poc_v001.py": {
       "bytes": 10729,
@@ -3113,6 +3165,10 @@
       "bytes": 23746,
       "sha256": "ef1ab2132334a364c20cf5fc7354ac1eb2e48636fb829141927d255dd897333c"
     },
+    "code/tools/supervise_arch_studies_v004.py": {
+      "bytes": 24482,
+      "sha256": "10943c9ddb12686bcc8bf25d5c90abd97260d7bfbaddcfe1e43ea22ba8b6cdc9"
+    },
     "code/tools/supervise_mlsys_handoff_v001.py": {
       "bytes": 23595,
       "sha256": "ea0585a9f3ae4dd267b35e76a21512f15a77642ef00918d5d3d074d71be01782"
@@ -3120,6 +3176,10 @@
     "code/tools/validate_application_sources_v001.py": {
       "bytes": 2357,
       "sha256": "8f49bf2d470d7308dff7c5c64c8922dc979f6d07d8d88f53d8b2c8faf54019c1"
+    },
+    "code/tools/validate_public_checkpoint_v001.py": {
+      "bytes": 1448,
+      "sha256": "9ef537586e590c99ca8d41e1bb326458c78fd42139b33a7fc2b010928ebd4385"
     },
     "code/tools/validate_strassen_optimized_v001.py": {
       "bytes": 6865,
@@ -3129,9 +3189,33 @@
       "bytes": 3027,
       "sha256": "c098cb4d4c6801a2d4024fabfe2e5a9d9e1523a60203723f774ada5df9a83dd6"
     },
+    "code/tools/verify_public_checkpoint_v002.py": {
+      "bytes": 3545,
+      "sha256": "bc9658eb47266710fe27b29f701acf08c93ce811cf921161a590318d1342f9bd"
+    },
     "code/tools/wait_large_gemma_access_v001.py": {
       "bytes": 801,
       "sha256": "55df7ad996c156535d477c5a2beba2a282898c86173fbe9e95996d3b91823c51"
+    },
+    "provenance/final-release/completion.json": {
+      "bytes": 92,
+      "sha256": "18c0e0445cbd942a4e3e9c242711ae1d0c5306820be4075b994dd8aea06d73d6"
+    },
+    "provenance/final-release/execution.json": {
+      "bytes": 465,
+      "sha256": "9f99de803964d7b902498be4dfe05d04341208ef73f470943aaea0bddc01e028"
+    },
+    "provenance/final-release/execution.log": {
+      "bytes": 151,
+      "sha256": "5d9696077bec2f3ef6d6cda9ba2f51dbab410147dd0fa2378c17ebf84ca060cb"
+    },
+    "provenance/final-verification/heartbeat-deleted.json": {
+      "bytes": 522,
+      "sha256": "33b744c15320255769b79fe83327aef5ab6c5090de196ef0b1c536d32fd3ace8"
+    },
+    "provenance/final-verification/verified-completion.json": {
+      "bytes": 98314,
+      "sha256": "2d186d6d58a407b971bf841096394bc748c4156d67a96047094fe6757e51ca71"
     },
     "provenance/operator-pause/pause.json": {
       "bytes": 476,
@@ -3146,32 +3230,36 @@
       "sha256": "d26a4e13788439f200e636d161566433f2ed732dd35ab6f1bea7491631cfa9e6"
     },
     "provenance/supervisor/active-source.json": {
-      "bytes": 223,
-      "sha256": "f484703743eb8badcb7d58d35af8106cc323825b8d78a4c3516ae7986185346e"
+      "bytes": 217,
+      "sha256": "df38c5ba712b7fa74c4bcea956510325af1994420fa20eea4503a8ec9435188b"
+    },
+    "provenance/supervisor/completion.json": {
+      "bytes": 202,
+      "sha256": "c60c0449eb438c8e85a0d716dc044eecc109147b68347541d5015d8c85d0d2be"
     },
     "provenance/supervisor/events.jsonl": {
-      "bytes": 8500,
-      "sha256": "e9077675f49233c0245a6fecc43337b3c7c2895297d19c1b022ebd7eaf4ebdf6"
+      "bytes": 12006,
+      "sha256": "60663822a9f3bc2d8bfbd01a13b5cbce2d17180338e77975efb48667d78feaf4"
     },
     "provenance/supervisor/history.json": {
-      "bytes": 853,
-      "sha256": "4b4a23a9c64b083e735c9fe15bec50e33c0e551b0e9e02a6974845016cd1d8d1"
+      "bytes": 1501,
+      "sha256": "bce873b42bfd38fed39c2a0ef59eb579dd5399db2f7f8e83cbc0af7cc5e1146d"
     },
     "provenance/supervisor/progress.json": {
-      "bytes": 810345,
-      "sha256": "d7a48b1376a21eaade22b9b119999e9bd72ffa477b624709ab1aabc17cde6b94"
+      "bytes": 1206417,
+      "sha256": "114b86b47e0f9b42f47cc7dac9d76e0253d34cb25472bb4343b8a9483bcb7b5c"
     },
     "provenance/supervisor/supervisor-state.json": {
-      "bytes": 762,
-      "sha256": "fa85213e81cef0f9b7d8a41b5fc5d66cbeefb8d5ba54829f0e9fd3f287346d6c"
+      "bytes": 691,
+      "sha256": "78d05331643947d57c08425f26f13b7c4c336fbe9c792b146d9291bf22cb7ee0"
     },
     "provenance/work_progress_v001.jsonl": {
-      "bytes": 305943,
-      "sha256": "c44287392151cfe9d2f5cbcbe438a72855b099fd4147712d5a758775cd3cd8cf"
+      "bytes": 366913,
+      "sha256": "d3362e0276d6636f006cda6a72d858bf8a0df31097dd1c133fb13f58e1d6acdd"
     },
     "replay.py": {
-      "bytes": 3844,
-      "sha256": "96657da6f32e8ba0891e3d770d13959e853af7203489551566cc50a8a512e2d9"
+      "bytes": 3845,
+      "sha256": "c41f8aab9dc1b26cb72ed3c566c83de3d4ab58c5aacb45a330db83d99cadf51e"
     },
     "results/v5e/168_shapes_fp32_20260921_v001/EXPORT_MANIFEST.json": {
       "bytes": 9567,
@@ -3445,21 +3533,25 @@
       "bytes": 217,
       "sha256": "fb8da2bf65028b3c205d026af8e93bf553e7dd86376246263030cb68475a570a"
     },
+    "results/v6e/COMPLETE.json": {
+      "bytes": 3029,
+      "sha256": "fd03a11c32d8140da76a5fd0d54a3ca4428b6b0bda274fd3db1112f5a5f33d01"
+    },
     "results/v6e/ORIGINAL_README.md": {
-      "bytes": 3096,
-      "sha256": "69929767b44cfe863f5f5ad5bd51c714e3a1fb1d391c86a05f22390ef9eacb0c"
+      "bytes": 3938,
+      "sha256": "dd912ad9454007eef7609db062542046564bc1babfb55c16434230beced981cf"
     },
     "results/v6e/PROTOCOL.md": {
       "bytes": 6357,
       "sha256": "14d767cd2573d418e29260fd95c59e8bee55bca1f67bb19399bf0bef58d6deb1"
     },
     "results/v6e/README.md": {
-      "bytes": 870,
-      "sha256": "c41293165264b38f23f788ab38aa226d4bc7e0671816b9643295e59176e32b5c"
+      "bytes": 763,
+      "sha256": "7a6a409bcf81db862d5ce9dd1f38c6d4d76fa4db3d7f4cb787978723f5c2b0b1"
     },
     "results/v6e/phase-index.json": {
-      "bytes": 19927090,
-      "sha256": "67f6fe75cc1ed95f3eb3937e8dfc1343688c5b04e35ef71139fc527457736b3d"
+      "bytes": 33233053,
+      "sha256": "35e068374ea67f814dc9a528942994f0692383323132f267ad0c6051251f02a1"
     },
     "results/v6e/phases/20260927-arch-v6e-168-v001-arch-smoke.tar.gz": {
       "bytes": 590105,
@@ -4361,6 +4453,150 @@
       "bytes": 2180177,
       "sha256": "b046d7394b22f8ffcf7b1863a432b2e27f9f92fbc86f74584bf2a6155515bd77"
     },
+    "results/v6e/phases/arch-113-confirm.tar.gz": {
+      "bytes": 672658,
+      "sha256": "94659fa76c13905b689f58eef5c87b0669cb79bd28b57c7ccbd47fe02bc6203f"
+    },
+    "results/v6e/phases/arch-113-screen.tar.gz": {
+      "bytes": 3055685,
+      "sha256": "ddda01cd3362d155b4404c280e782528496208f004dfdf64a0877c0297806d5d"
+    },
+    "results/v6e/phases/arch-114-confirm.tar.gz": {
+      "bytes": 518985,
+      "sha256": "d0e61263e0a7056fcac114fb2a822f71de6772c24215c617b697d4fe0d8680f2"
+    },
+    "results/v6e/phases/arch-114-screen.tar.gz": {
+      "bytes": 1288571,
+      "sha256": "f87698b5902fa83040cfd9acff5586e0d2e7819a41c2032f669cada9ab0cb48f"
+    },
+    "results/v6e/phases/arch-115-confirm.tar.gz": {
+      "bytes": 687829,
+      "sha256": "55bff1c982b1df0d714af6d500ba7935eef83705d3590cdcd8eaf6d3a43c0182"
+    },
+    "results/v6e/phases/arch-115-screen.tar.gz": {
+      "bytes": 3468159,
+      "sha256": "3159bc381727723d41c444cade656b29401713ade4a52579694ad7753eb394ad"
+    },
+    "results/v6e/phases/arch-116-confirm.tar.gz": {
+      "bytes": 711275,
+      "sha256": "cee686f2ac17935d18adbfa6e34d68e0dcf356c7ad4f10badf29456d155403ae"
+    },
+    "results/v6e/phases/arch-116-screen.tar.gz": {
+      "bytes": 3064391,
+      "sha256": "71c2abd11c09cf01c953700dc1d78811da3d0fdf7a468d58af3d3b3fd5066441"
+    },
+    "results/v6e/phases/arch-117-confirm.tar.gz": {
+      "bytes": 755059,
+      "sha256": "8e0db4345689b935d86482487611c3eb291fdad9140265e120ccb8a16b8f77b2"
+    },
+    "results/v6e/phases/arch-117-screen.tar.gz": {
+      "bytes": 4162823,
+      "sha256": "d69faeab7270d383168ef8c4232860a9b9170b68ac87f3a902f59bcc8eea3868"
+    },
+    "results/v6e/phases/arch-118-confirm.tar.gz": {
+      "bytes": 687038,
+      "sha256": "b86cbbe778f9f401f2b16299963f8cbc507d89bd29bc8e21ea65fe1ccb85a77a"
+    },
+    "results/v6e/phases/arch-118-screen.tar.gz": {
+      "bytes": 2984768,
+      "sha256": "af56e366806625f09717fec567a7cd9a41b189cc41a5b4e749bdbd9aca3779d9"
+    },
+    "results/v6e/phases/arch-119-confirm.tar.gz": {
+      "bytes": 730235,
+      "sha256": "a364d161f6b5db6eed687c9c14facb3402e00d148a9d8d1049d0f2e3898b7cf6"
+    },
+    "results/v6e/phases/arch-119-screen.tar.gz": {
+      "bytes": 4256774,
+      "sha256": "fa2a40dc7b1929883014a25b52658d89459bad52b143978fab830d9a5cc320f4"
+    },
+    "results/v6e/phases/arch-120-confirm.tar.gz": {
+      "bytes": 738438,
+      "sha256": "b533b066c940d5a03de023a83333b23f41fc54b642c27df1f446624c43496204"
+    },
+    "results/v6e/phases/arch-120-screen.tar.gz": {
+      "bytes": 4090070,
+      "sha256": "7df44105ddca110d665532d8fdeab91a1e1805c1e8b9d3dbb06588d38039a47f"
+    },
+    "results/v6e/phases/arch-121-confirm.tar.gz": {
+      "bytes": 721308,
+      "sha256": "ba7e32322f60bb76969cf9243a2aa7e03e5a607a07549b290e7da5ac1cdf12c1"
+    },
+    "results/v6e/phases/arch-121-screen.tar.gz": {
+      "bytes": 3042590,
+      "sha256": "84c8fc380915013ab2a61b7072784005a7013c8747a14d52286bf2fb7e6af22d"
+    },
+    "results/v6e/phases/arch-122-confirm.tar.gz": {
+      "bytes": 656362,
+      "sha256": "f8dbf6d5df718009a250f938f32a227694f893608a0da25a349edee50f5e05e6"
+    },
+    "results/v6e/phases/arch-122-screen.tar.gz": {
+      "bytes": 2787335,
+      "sha256": "7eec86960ce1bf242af364a77927a518f1f3c2f64f04a2395de6627539ee105c"
+    },
+    "results/v6e/phases/arch-123-confirm.tar.gz": {
+      "bytes": 620329,
+      "sha256": "58fc3202abfe772ee1c9e0d2aa9325ad99518d838f6bd4c8bee0f003dce33870"
+    },
+    "results/v6e/phases/arch-123-screen.tar.gz": {
+      "bytes": 1901075,
+      "sha256": "d944442309c513f029a2261c7a42dc9c90a7d8eaa9e58df00026902e3abdc441"
+    },
+    "results/v6e/phases/arch-124-confirm.tar.gz": {
+      "bytes": 630118,
+      "sha256": "4fd62dfca113cd41fcb21b923b1002cad19be07036ed41db89e486d53efbe650"
+    },
+    "results/v6e/phases/arch-124-screen.tar.gz": {
+      "bytes": 1932905,
+      "sha256": "23b8a8d505570f8c6ffe646c3b38d4f83547a98eff28383ef3cbca6ad6d584fe"
+    },
+    "results/v6e/phases/arch-125-confirm.tar.gz": {
+      "bytes": 618863,
+      "sha256": "ed7cd09079fc1f465942536b658f04ccdea7ea7efcfd11c4102b74afeba87fc5"
+    },
+    "results/v6e/phases/arch-125-screen.tar.gz": {
+      "bytes": 1738876,
+      "sha256": "083c29a8c2450801877e2751aa6da17b14ae55e63520ddefd620aad73042d01c"
+    },
+    "results/v6e/phases/arch-126-confirm.tar.gz": {
+      "bytes": 746948,
+      "sha256": "5ff6c36bffa9d591402ef6c75e9d5296a158848359142f2ba70693e58e443ee6"
+    },
+    "results/v6e/phases/arch-126-screen.tar.gz": {
+      "bytes": 4166048,
+      "sha256": "b5a7cf08aef72aa4d18c74141282a23933a312f9250ffc55f3154c41ea26f892"
+    },
+    "results/v6e/phases/arch-127-confirm.tar.gz": {
+      "bytes": 611779,
+      "sha256": "4b9861513ded66e88ff0fc2e2db9976f8d1104f4d0ef2f411e6f7c46e17609aa"
+    },
+    "results/v6e/phases/arch-127-screen.tar.gz": {
+      "bytes": 1713693,
+      "sha256": "d125b09784fd7db2d3fbb206920fee631438b7723e2fa0acac22479245268e96"
+    },
+    "results/v6e/phases/arch-128-confirm.tar.gz": {
+      "bytes": 743125,
+      "sha256": "b12df3c1d640fede8f4f0bf7351c105c93596f14b7cf4f7581488e9b6af54fc8"
+    },
+    "results/v6e/phases/arch-128-screen.tar.gz": {
+      "bytes": 4145202,
+      "sha256": "29f08491b609b32f5cb47981b5470c7fe03de2109fc5f140f9f3170b4aeda275"
+    },
+    "results/v6e/phases/arch-129-confirm.tar.gz": {
+      "bytes": 681374,
+      "sha256": "127fc49fbcb749203411bbd3ce6a323f7f5497e2e42eb91e88c414cf306875b7"
+    },
+    "results/v6e/phases/arch-129-screen.tar.gz": {
+      "bytes": 2867827,
+      "sha256": "5e2f0c5870bf7cbb004aa2a144fd937b6dfdb5feabeec1cd1221cb176f8102e2"
+    },
+    "results/v6e/phases/arch-130-confirm.tar.gz": {
+      "bytes": 564356,
+      "sha256": "7d3101e5a27d43ad8a4cef2b399047aa33d164c745c87d30feeb00506e51d0d5"
+    },
+    "results/v6e/phases/arch-130-screen.tar.gz": {
+      "bytes": 2143010,
+      "sha256": "e7e9ae55706434d0482e97b54db40f504495cec6963be98911652bc8d4ae0b58"
+    },
     "results/v6e/phases/arch-131-confirm.tar.gz": {
       "bytes": 735126,
       "sha256": "7474596b57876403567d63c5fc84cb9c0bd5b96c45a63ecf9fc13d11d6b2aa74"
@@ -4368,6 +4604,302 @@
     "results/v6e/phases/arch-131-screen.tar.gz": {
       "bytes": 4105997,
       "sha256": "d77dfe47f8afcf5d3037d82e1754ef4e14b43b5e92046ba4be7852563ca9f401"
+    },
+    "results/v6e/phases/arch-132-confirm.tar.gz": {
+      "bytes": 660412,
+      "sha256": "3b37f316fe6754613204d24353d9a8d310388efdd77f192736a1d3da8b7a5ba2"
+    },
+    "results/v6e/phases/arch-132-screen.tar.gz": {
+      "bytes": 2805011,
+      "sha256": "4d170005d28d4f770fdab8f55a5fa34c2b688c8c86b93015e2c67edab8238a1d"
+    },
+    "results/v6e/phases/arch-133-confirm.tar.gz": {
+      "bytes": 751760,
+      "sha256": "a3445d6b94234e7e59fbc754b519f46cf120890d2c50d65160a4d8490daca349"
+    },
+    "results/v6e/phases/arch-133-screen.tar.gz": {
+      "bytes": 4338218,
+      "sha256": "f531be7b5866aaf9f26b05cfb3532ed622f27007bd6e1397a645764dedc6f341"
+    },
+    "results/v6e/phases/arch-134-confirm.tar.gz": {
+      "bytes": 612549,
+      "sha256": "0763241a9f3015eeb59b7d51950524d34aa363853dbe12fcf4b7cd08a506138c"
+    },
+    "results/v6e/phases/arch-134-screen.tar.gz": {
+      "bytes": 1704556,
+      "sha256": "7f6c35edcf80bfbc02fb1a32983881c112a97b2bc1d0cfd99f243fe04642eab0"
+    },
+    "results/v6e/phases/arch-135-confirm.tar.gz": {
+      "bytes": 750224,
+      "sha256": "c5bbd76e2d15f19dbfe46dd801f26c257a1857e2ae63f304c596d333816b0f11"
+    },
+    "results/v6e/phases/arch-135-screen.tar.gz": {
+      "bytes": 4272511,
+      "sha256": "753b1997f98479891d1f875545b2176866561febdfe1a618da38395676e576cd"
+    },
+    "results/v6e/phases/arch-136-confirm.tar.gz": {
+      "bytes": 616428,
+      "sha256": "5283e6475a305768b9dbc3bd9444dafcfbb1f50d79f70b8dd1bc5618d9c4c638"
+    },
+    "results/v6e/phases/arch-136-screen.tar.gz": {
+      "bytes": 1754971,
+      "sha256": "d7972935a41a5e078e091f18150b7e039d39c54093f6508839975ca049243e84"
+    },
+    "results/v6e/phases/arch-137-confirm.tar.gz": {
+      "bytes": 721526,
+      "sha256": "b06481a1fc30daab789732b4e4125edc04bed1d7aad8c744f3fcb7ed895945a8"
+    },
+    "results/v6e/phases/arch-137-screen.tar.gz": {
+      "bytes": 4108840,
+      "sha256": "4f9814234518738780c70fb1a49e9edaf8b4d2a7e7e835ce464248e6e3c28d97"
+    },
+    "results/v6e/phases/arch-138-confirm.tar.gz": {
+      "bytes": 696433,
+      "sha256": "723a24c0c1442225d0162ba3dc05e5a50055d8fa1315ba570e2cf5483469a256"
+    },
+    "results/v6e/phases/arch-138-screen.tar.gz": {
+      "bytes": 3435205,
+      "sha256": "b336300a1c03ad64334673a3b9434824f2ac767b81bcadc45cd072a01252a8fd"
+    },
+    "results/v6e/phases/arch-139-confirm.tar.gz": {
+      "bytes": 575027,
+      "sha256": "bce646e27f73bf9ac6b10550e3bdada93d7026f3504e1e411382c78d70872c31"
+    },
+    "results/v6e/phases/arch-139-screen.tar.gz": {
+      "bytes": 2532033,
+      "sha256": "cf050a366707bf56743772253bc98f2449457b20b647fbcf53d955f81631719d"
+    },
+    "results/v6e/phases/arch-140-confirm.tar.gz": {
+      "bytes": 738353,
+      "sha256": "ce64b023f68e8def07e6c7c7caef4b59a303a7eca63cd70f4330b47a08c0671d"
+    },
+    "results/v6e/phases/arch-140-screen.tar.gz": {
+      "bytes": 4228953,
+      "sha256": "4a3208195eec4947fca02277419948a97bcfc799d10dc6703099b580907fa595"
+    },
+    "results/v6e/phases/arch-141-confirm.tar.gz": {
+      "bytes": 728622,
+      "sha256": "2904bfa474081aab0d44905c1abb939dd584ad44c74c8e25d38248d3d02b8c2d"
+    },
+    "results/v6e/phases/arch-141-screen.tar.gz": {
+      "bytes": 4220436,
+      "sha256": "bde8e7dfeb8167ec229565aaaef4364a701b657671e19df74eccccfc5b14a7df"
+    },
+    "results/v6e/phases/arch-142-confirm.tar.gz": {
+      "bytes": 740685,
+      "sha256": "aaca7483391545cbacb44cacd1759e9b3bd0858dba2e3b2e09f7af53357710b3"
+    },
+    "results/v6e/phases/arch-142-screen.tar.gz": {
+      "bytes": 4308344,
+      "sha256": "260f04667d2bd8d215d12b556ee4f6223bbd616e0efdc01327255f50288fde37"
+    },
+    "results/v6e/phases/arch-143-confirm.tar.gz": {
+      "bytes": 692637,
+      "sha256": "938fccdd7b49df7153497a2299378040c7c18512e52ff868115288a2b660dc79"
+    },
+    "results/v6e/phases/arch-143-screen.tar.gz": {
+      "bytes": 3581994,
+      "sha256": "79525572df21992f556742d1559e64effaea2e382c97a37faec47945da5e8104"
+    },
+    "results/v6e/phases/arch-144-confirm.tar.gz": {
+      "bytes": 693237,
+      "sha256": "9fd0579af536bea2511bd49f3988c95fe85d0db25b2c8d0b69391fbcb4a20657"
+    },
+    "results/v6e/phases/arch-144-screen.tar.gz": {
+      "bytes": 3582345,
+      "sha256": "bb47702a32f656e769dcc6a9f889e700ad8052686841b97598cbf14726dea2c9"
+    },
+    "results/v6e/phases/arch-145-confirm.tar.gz": {
+      "bytes": 649947,
+      "sha256": "b2981a133825b8ed334a6212d80e2751a6a93fb7b3c457de94e57b056a0e93f9"
+    },
+    "results/v6e/phases/arch-145-screen.tar.gz": {
+      "bytes": 2794411,
+      "sha256": "67b736c6dbe76dd5a8b067b9326e747a053a3ba57c0524e9bc1257b960d4083d"
+    },
+    "results/v6e/phases/arch-146-confirm.tar.gz": {
+      "bytes": 754871,
+      "sha256": "510d0d94ad42c62884a09419828b6bdf7cff8d56e5790f41202d75e6c0eb12e7"
+    },
+    "results/v6e/phases/arch-146-screen.tar.gz": {
+      "bytes": 4585427,
+      "sha256": "591399d42144072c6f6bb937cdae185f40201f30c76b749943fbb1ae9f034463"
+    },
+    "results/v6e/phases/arch-147-confirm.tar.gz": {
+      "bytes": 747507,
+      "sha256": "2ec307fcbce5d7964ead4bc980fa8bb5149e8177ff465fe3d5ede4aa8ce73e89"
+    },
+    "results/v6e/phases/arch-147-screen.tar.gz": {
+      "bytes": 4208557,
+      "sha256": "d3fd31ee4f9017f28f8826a332ed759683b21c5967298b285c7fd4d47462f4cb"
+    },
+    "results/v6e/phases/arch-148-confirm.tar.gz": {
+      "bytes": 605326,
+      "sha256": "f52f769c129b20af299aaa974fb86b3718ae8201919136cf2136f44f119a792b"
+    },
+    "results/v6e/phases/arch-148-screen.tar.gz": {
+      "bytes": 1519488,
+      "sha256": "2d747d94d287229811c37f2564d063ad89f3f3d3f775f8bb6e9a4665a6d6732c"
+    },
+    "results/v6e/phases/arch-149-confirm.tar.gz": {
+      "bytes": 733866,
+      "sha256": "ab987f581ac419b90356971a871e478389ac6eaf19349e6dcfb664b89f84b941"
+    },
+    "results/v6e/phases/arch-149-screen.tar.gz": {
+      "bytes": 4192982,
+      "sha256": "22c408b198e771e574720f5bb2aa7e1d1a4bdff8bbbe2ea38746ee6d65275f7f"
+    },
+    "results/v6e/phases/arch-150-confirm.tar.gz": {
+      "bytes": 756093,
+      "sha256": "f6a73ce64ee77115f6d38be989564a9aeac8acdb65e274f0d871e9491df80bce"
+    },
+    "results/v6e/phases/arch-150-screen.tar.gz": {
+      "bytes": 4312961,
+      "sha256": "ea4ddf0a2294fe8cfaee2dac4a0d10a83fca72085691de9e4d87b46c9d51ae64"
+    },
+    "results/v6e/phases/arch-151-confirm.tar.gz": {
+      "bytes": 612764,
+      "sha256": "0a0764b9a0775aee51feeb43c9ae41d295db39e8406a63a9c23909741a4c0b33"
+    },
+    "results/v6e/phases/arch-151-screen.tar.gz": {
+      "bytes": 1502249,
+      "sha256": "9374581b0099844b50b9c379bd88410790fa28edfc02ae70e329c7568683272f"
+    },
+    "results/v6e/phases/arch-152-confirm.tar.gz": {
+      "bytes": 758914,
+      "sha256": "16829f07519fb80ce327aa24c26452baf794fa2e4507e69834180d7a988cee04"
+    },
+    "results/v6e/phases/arch-152-screen.tar.gz": {
+      "bytes": 4271677,
+      "sha256": "badabbcba7414ca533d1e5aa50ab788d6feaba3d3adb38e3c9bbca8ed9ce68e9"
+    },
+    "results/v6e/phases/arch-153-confirm.tar.gz": {
+      "bytes": 563736,
+      "sha256": "5e39dce73037fb8e1f23e874b12e6cfa254d4bbb193e4e1054474fd3a3699a42"
+    },
+    "results/v6e/phases/arch-153-screen.tar.gz": {
+      "bytes": 2212764,
+      "sha256": "91b78b0eee7d2f3c5e40870a2f360c0a4623f18f74ff62322d3fc7a02ff54754"
+    },
+    "results/v6e/phases/arch-154-confirm.tar.gz": {
+      "bytes": 722496,
+      "sha256": "b398b34e8b13a41cf42e3d826bceb32c48a761182730115aad16015645546b84"
+    },
+    "results/v6e/phases/arch-154-screen.tar.gz": {
+      "bytes": 3878814,
+      "sha256": "7dc55110a89d53cde19a803fd4b0c72808220d0359a9f68cf3235d91aa5f3dd6"
+    },
+    "results/v6e/phases/arch-155-confirm.tar.gz": {
+      "bytes": 744770,
+      "sha256": "9f9ed4221449b168dc7913bef540cc996df049fa21c48dab1c5fc02778207186"
+    },
+    "results/v6e/phases/arch-155-screen.tar.gz": {
+      "bytes": 4170231,
+      "sha256": "fb7564327e4b1740be4b4f6e857d2165b64fe7e932d44f1f9c807f97183ff4f4"
+    },
+    "results/v6e/phases/arch-156-confirm.tar.gz": {
+      "bytes": 716096,
+      "sha256": "d250653aff3ac96b6ceaa1632edcd409aa04ec5c407c72360c06d9939a8bece2"
+    },
+    "results/v6e/phases/arch-156-screen.tar.gz": {
+      "bytes": 3929894,
+      "sha256": "6cba986333679418abd17c0715b78e202a48aa0623757265742c781b9e792288"
+    },
+    "results/v6e/phases/arch-157-confirm.tar.gz": {
+      "bytes": 692137,
+      "sha256": "bf23bd13022c55aa298732c607e35660c389a67e9ec763b04a5dd588603fa75e"
+    },
+    "results/v6e/phases/arch-157-screen.tar.gz": {
+      "bytes": 3497085,
+      "sha256": "143c0bc8764bb87b02073568c76e2c0ae27a58cb0edb26d2ef66aa4994297093"
+    },
+    "results/v6e/phases/arch-158-confirm.tar.gz": {
+      "bytes": 685849,
+      "sha256": "cb04016c0eaf19ffae3cb5986e2c0700e22be8011168a3124428d0f26a188513"
+    },
+    "results/v6e/phases/arch-158-screen.tar.gz": {
+      "bytes": 3353313,
+      "sha256": "588c594a51d7398108641a56d394a2bad1f443a1e7a620da81fd5915817a09c2"
+    },
+    "results/v6e/phases/arch-159-confirm.tar.gz": {
+      "bytes": 573786,
+      "sha256": "2da9d6b7dd1fb7fe9a4006f52234b9605ef6bce157a3b020ec31458db0908963"
+    },
+    "results/v6e/phases/arch-159-screen.tar.gz": {
+      "bytes": 2181218,
+      "sha256": "9f194de06c51d21b88d99859ed7ca5be9efb789dca930a3a94c9993a1def7477"
+    },
+    "results/v6e/phases/arch-160-confirm.tar.gz": {
+      "bytes": 592975,
+      "sha256": "63d27935074b62c5332205c673fcf629412795e1da782d1bd1b0c4edacddd2ff"
+    },
+    "results/v6e/phases/arch-160-screen.tar.gz": {
+      "bytes": 2459707,
+      "sha256": "fc4893d3952d3c0693af7fb6db4cf2381c800c39d2d3e26fd96c7bb2e571167c"
+    },
+    "results/v6e/phases/arch-161-confirm.tar.gz": {
+      "bytes": 721971,
+      "sha256": "b90f32b6667598bb86c5b762c8bc9cd3450752ae2cd10df0eb1b555437f5c21a"
+    },
+    "results/v6e/phases/arch-161-screen.tar.gz": {
+      "bytes": 3619420,
+      "sha256": "92c33fe73f25376c5cf7f659ddbcbcad926ec50bef758a4ba2a5f88c7661a15e"
+    },
+    "results/v6e/phases/arch-162-confirm.tar.gz": {
+      "bytes": 734518,
+      "sha256": "973360cd3ce5d0dbef6f1110bf626a47757c4373edeffe5a0663d93d96da2bed"
+    },
+    "results/v6e/phases/arch-162-screen.tar.gz": {
+      "bytes": 4126262,
+      "sha256": "53e9b6a46b9b9639ff29b1a138f85ddda5dc1dbe1d37cac81b46ec6adc9581a4"
+    },
+    "results/v6e/phases/arch-163-confirm.tar.gz": {
+      "bytes": 718605,
+      "sha256": "9e1946f46a8be5c539a7517989d39ee2ff34dd426f720b4fd2b627e6173af45e"
+    },
+    "results/v6e/phases/arch-163-screen.tar.gz": {
+      "bytes": 3587697,
+      "sha256": "7c39b508c6d0a35309d8227bf4377b77a1605a76c22615e1c6e42247f7dfabef"
+    },
+    "results/v6e/phases/arch-164-confirm.tar.gz": {
+      "bytes": 719263,
+      "sha256": "7b65f7d3055f93070f267d2d87732b2c13c8cf604305b3b213509ba4434de241"
+    },
+    "results/v6e/phases/arch-164-screen.tar.gz": {
+      "bytes": 3833196,
+      "sha256": "0501f2a2820b0d3e48698e1963dc833bed355c05f6dfb9d933736f6de281798b"
+    },
+    "results/v6e/phases/arch-165-confirm.tar.gz": {
+      "bytes": 750434,
+      "sha256": "01a72e66ffb4da6594764fe2114009d7265359f4571da62acdb230be21dcc38b"
+    },
+    "results/v6e/phases/arch-165-screen.tar.gz": {
+      "bytes": 4350225,
+      "sha256": "d40c707d7a161d4448df44eead67b80ed7f9674764ab122392e6ae38b9e7aa04"
+    },
+    "results/v6e/phases/arch-166-confirm.tar.gz": {
+      "bytes": 616069,
+      "sha256": "836979915e9b1ce3664dabf47ceb3599cd6e47a4e323fbba799b11a1a0906446"
+    },
+    "results/v6e/phases/arch-166-screen.tar.gz": {
+      "bytes": 1532507,
+      "sha256": "e0296559efd89e883d0b2a26dd826e3870bb74bdd5d9d61a055c62d01802c60b"
+    },
+    "results/v6e/phases/arch-167-confirm.tar.gz": {
+      "bytes": 777520,
+      "sha256": "215873a216e9fb9261818fc6efc05ef5f9d4c3c72f1b2e64c80313a8c8f3783d"
+    },
+    "results/v6e/phases/arch-167-screen.tar.gz": {
+      "bytes": 4484192,
+      "sha256": "8bbb3fee4fc8abab2b91a580202c7c058398a1fc6a352c49c40c279fbfb8c7ab"
+    },
+    "results/v6e/phases/arch-168-confirm.tar.gz": {
+      "bytes": 614343,
+      "sha256": "1bc64e25ac09c7f8854d9c662491a0dbeb4f43f0d73b61052f6f28870d88c371"
+    },
+    "results/v6e/phases/arch-168-screen.tar.gz": {
+      "bytes": 1556704,
+      "sha256": "a626dc6f63fbf24006faa6414c531331772ec405b73b01177408be9e843e2d21"
     },
     "results/v6e/phases/auto-v6e-20260927T214429Z-b407-arch-smoke.tar.gz": {
       "bytes": 593846,
@@ -4380,6 +4912,22 @@
     "results/v6e/phases/auto-v6e-20260929T044310Z-5996-arch-smoke.tar.gz": {
       "bytes": 594613,
       "sha256": "d3800046033df4a1b05737af015df1c2cbb06f4668ab2bd7dfd9c0fb383cf7f5"
+    },
+    "results/v6e/phases/auto-v6e-20260930T021108Z-10a0-arch-smoke.tar.gz": {
+      "bytes": 595085,
+      "sha256": "41259df2aeaab67330d1f5912c447ebd9bbc5ef832f7bc15d81d05d90c289ee3"
+    },
+    "results/v6e/phases/auto-v6e-20260930T184759Z-0c66-arch-smoke.tar.gz": {
+      "bytes": 595957,
+      "sha256": "26d7a0e6fe053e660d21d1b743b1f6ca64fe1a377402471b9f22397bbd309068"
+    },
+    "results/v6e/phases/auto-v6e-20260930T233641Z-d6bb-arch-smoke.tar.gz": {
+      "bytes": 595694,
+      "sha256": "4e41b9defcc44d018c3eec9e0e61485a6c1fd70ba696437b4ae66aa5c9b1dcc9"
+    },
+    "results/v6e/phases/auto-v6e-20261001T160045Z-eebd-arch-smoke.tar.gz": {
+      "bytes": 595620,
+      "sha256": "eb0b294b1c588f1f735a95c7d470fbf15e342385f060acfca246f3f31d9febf2"
     },
     "results/v6e/provenance/20260927-arch-v6e-168-v001/cohort.json": {
       "bytes": 265,
@@ -4480,6 +5028,86 @@
     "results/v6e/provenance/auto-v6e-20260929T044310Z-5996/source.tar.gz": {
       "bytes": 1530678,
       "sha256": "6dbc03006562f7ca026aa237f4c138b7f7d931ff8c13de9eeb60914307aad8c3"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T021108Z-10a0/cohort.json": {
+      "bytes": 272,
+      "sha256": "17878931de5e2e96943bb78d3bb3279d5766af21b9fe290336882d6bba050a18"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T021108Z-10a0/frozen.json": {
+      "bytes": 85228,
+      "sha256": "2a8c06966f4bd5f451d4b65e00abdb8676dae258ddf7d97eca60af7673e53780"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T021108Z-10a0/manifest.json": {
+      "bytes": 252,
+      "sha256": "3cea76b912d9bd5c3b372920868e46c3a83a49c18706c8cb4911827d4973bc6f"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T021108Z-10a0/plan.json": {
+      "bytes": 110215,
+      "sha256": "48e1e7f1a0e926f77c5f1d0552bbc879d270cced228627f2e0267c86677f888f"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T021108Z-10a0/source.tar.gz": {
+      "bytes": 1542916,
+      "sha256": "ead3b5ade1f3aee7f1146db3e1fcc6ca1664e220ce33cb1bd636654519e3555d"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T184759Z-0c66/cohort.json": {
+      "bytes": 272,
+      "sha256": "7f4109be2f1a512fd479a089cf75ae4a05cdb5fe32ddfa03cd211af9527d213a"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T184759Z-0c66/frozen.json": {
+      "bytes": 85901,
+      "sha256": "dd496534fa45680d1b3cd2672823be3f91202096475b7cbc0bb35310810a2943"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T184759Z-0c66/manifest.json": {
+      "bytes": 252,
+      "sha256": "aa4d4f7fc0205e77b1547af7d80818dae87c54391ce088d73be0dde4fd586e44"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T184759Z-0c66/plan.json": {
+      "bytes": 75259,
+      "sha256": "a6f15c376ac6213ca35d7a4567f1ae753baaf04cb5f5ed9f00b5bf23279ce867"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T184759Z-0c66/source.tar.gz": {
+      "bytes": 1551551,
+      "sha256": "346173ff917e2d56317bdea81a2c5d263a0f432053135cbe19c5bef108fbfddb"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T233641Z-d6bb/cohort.json": {
+      "bytes": 272,
+      "sha256": "f5e0db7cbc938c77d8474d59ff6a22e0a512fc076fb9c70ab8671d5db8d26aef"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T233641Z-d6bb/frozen.json": {
+      "bytes": 86009,
+      "sha256": "650da17865da91cf6997cddcb5d53fa0b03e5fd03801ae1f7e8707f617ac7c20"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T233641Z-d6bb/manifest.json": {
+      "bytes": 252,
+      "sha256": "e9d811a60adb3e4185ed0261b9ea9ef0d8a151162d46ad035afaf6e3444de3c2"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T233641Z-d6bb/plan.json": {
+      "bytes": 65549,
+      "sha256": "3d6136c121382781efb0125037a1c37120d6e78b2a8f6905b23f0264737ddc8c"
+    },
+    "results/v6e/provenance/auto-v6e-20260930T233641Z-d6bb/source.tar.gz": {
+      "bytes": 1553201,
+      "sha256": "991dc2da8a073186ae54dc4098908d03770771f4761965b127093ec81a7bc522"
+    },
+    "results/v6e/provenance/auto-v6e-20261001T160045Z-eebd/cohort.json": {
+      "bytes": 271,
+      "sha256": "bcbdf3af9acda9407c66e42cc965bd5505db9f0e902b4c7bf3d64de1b89b4903"
+    },
+    "results/v6e/provenance/auto-v6e-20261001T160045Z-eebd/frozen.json": {
+      "bytes": 86008,
+      "sha256": "c0e2e490cf87c8cf869ab3cf45454f88419f4d6e2820830e4d3b9883cafe9765"
+    },
+    "results/v6e/provenance/auto-v6e-20261001T160045Z-eebd/manifest.json": {
+      "bytes": 252,
+      "sha256": "1aae25b38657c97da017ca2aff1399edf982be0e76f1a04b219ca464c7c0a9fa"
+    },
+    "results/v6e/provenance/auto-v6e-20261001T160045Z-eebd/plan.json": {
+      "bytes": 40302,
+      "sha256": "c191c133dfeba110fc0f88a0093c0b9b6e924016a053619435b3a54db0c1ce19"
+    },
+    "results/v6e/provenance/auto-v6e-20261001T160045Z-eebd/source.tar.gz": {
+      "bytes": 1553948,
+      "sha256": "5d7f4d63d091c7ad20602122ce9e1b594a79739151810123ec801cbaf85cd4bd"
     },
     "results/v6e/qualification/automatic_progress_counter_v001.json": {
       "bytes": 206,
@@ -4997,68 +5625,112 @@
       "bytes": 4404,
       "sha256": "14cfc263131c312111285b0a5f875f979c2a12f8da67ed1b26538c8fec071483"
     },
+    "results/v6e/recovery/20260930-account-transition-v001/activation.json": {
+      "bytes": 792,
+      "sha256": "d481c24f8003652372e98f8c75d5d30a19a75dc7b577e16d80039244ea753cdc"
+    },
+    "results/v6e/recovery/20260930-account-transition-v001/active-source.json": {
+      "bytes": 223,
+      "sha256": "f484703743eb8badcb7d58d35af8106cc323825b8d78a4c3516ae7986185346e"
+    },
+    "results/v6e/recovery/20260930-account-transition-v001/manifest.json": {
+      "bytes": 486,
+      "sha256": "e4f1aa0e70710fb6e8827b8f8d6817ebee7d1b2acf8388c27e5983123147055a"
+    },
+    "results/v6e/recovery/20260930-account-transition-v001/restart.json": {
+      "bytes": 734,
+      "sha256": "f90febae477ae9048c130642427d29f39575137a7b74a8b554b3de31fb1ac6a6"
+    },
+    "results/v6e/recovery/20260930-account-transition-v001/setup-summary.json": {
+      "bytes": 387,
+      "sha256": "796b92724d921a2df1f5113ab8742f5e98cf42071e6fff1cb5fd05c4689b5cd8"
+    },
+    "results/v6e/recovery/20260930-account-transition-v001/supervisor-process.json": {
+      "bytes": 345,
+      "sha256": "137256a643db4a743877a2c803bf0f656f4419f39b2164d4d3226d85eae6e921"
+    },
+    "results/v6e/recovery/20260930-v6e-only-scope-v001/active-source.json": {
+      "bytes": 217,
+      "sha256": "df38c5ba712b7fa74c4bcea956510325af1994420fa20eea4503a8ec9435188b"
+    },
+    "results/v6e/recovery/20260930-v6e-only-scope-v001/lifecycle-checks.json": {
+      "bytes": 447,
+      "sha256": "ada6cb05185860523769b385725ce9dcd44e9d9d8599fb427bc84117d556f295"
+    },
+    "results/v6e/recovery/20260930-v6e-only-scope-v001/manifest.json": {
+      "bytes": 405,
+      "sha256": "65f239d8fd51956e27e1112b7133d2ff3fd2cfc218d0f082c4e5ee75825bb873"
+    },
+    "results/v6e/recovery/20260930-v6e-only-scope-v001/migration-completion.json": {
+      "bytes": 762,
+      "sha256": "384ef25b61ea1e1076470cf92ea033ccac9b251ef28e5b0753a27d02c70be937"
+    },
+    "results/v6e/recovery/20260930-v6e-only-scope-v001/verification.json": {
+      "bytes": 893,
+      "sha256": "7d7530400ebea89d043cb6f814cb0cc9e2ad836048b7635f7041c34246e80fe0"
+    },
     "results/v6e/report/RESULTS.md": {
-      "bytes": 189609,
-      "sha256": "e8a857f50fb2f2a11cead857d65a385190603192b8e1bf06946c944ed5ad4fd9"
+      "bytes": 284253,
+      "sha256": "0551691b0231d6c637c94f7afe8295dc97cbf52e150caacf74572375f1216804"
     },
     "results/v6e/report/SUMMARY.md": {
-      "bytes": 2003,
-      "sha256": "6756111272080b86453666063157e8404ab54e9e33b285a05dec42280aadd414"
+      "bytes": 1522,
+      "sha256": "8024010ea1d1fa073d963d9d25aabbbdea5d681918d8124f7b73f09e09ee71a4"
     },
     "results/v6e/report/TUNER_DESIGN.md": {
       "bytes": 2797,
       "sha256": "a189ce3088d75aeb2c3c089326fb0b868965b018e557e715c5ed2e3fc5009e97"
     },
     "results/v6e/report/candidate_decisions.json.gz": {
-      "bytes": 18599087,
-      "sha256": "7d8e165c9b65476c6b70fd2957b44364c5b54a86a96a72fab53295b56c1a0621"
-    },
-    "results/v6e/report/interim_summary.json": {
-      "bytes": 4492,
-      "sha256": "a1a6b1567821cc67ed8dc942908e604e98202df73b1d5211a79fcfbffd9c835c"
+      "bytes": 26671969,
+      "sha256": "3af6e2fad5d170f32ee3972657b54f08da6e0c7b6e3b3c6f923e257d4855743a"
     },
     "results/v6e/report/recovery_provenance.json": {
-      "bytes": 604492,
-      "sha256": "e9b9d66425741e8b434a2f39deb34170b576f85cc1367b1e5dfea02c5f485334"
+      "bytes": 897091,
+      "sha256": "ae22368cdb72421e1907104868f657c8fa50853d0c99201a1df87a665978a94d"
     },
     "results/v6e/report/results.json.gz": {
-      "bytes": 1904766,
-      "sha256": "d34db7f47e45fae3282951fa5c49f068ce2ba2e869e7cbf4bee2f5d0a6ffabbd"
+      "bytes": 2818749,
+      "sha256": "ab8308363525466b451c6d284fb5040717b3d399a4342e5f160166e3d8358b3e"
+    },
+    "results/v6e/report/summary.json": {
+      "bytes": 4407,
+      "sha256": "ce30448bde27d4961179ccc1a5560bb94baf6b98545a91e0d18f5731dcef87b4"
     },
     "results/v6e/report/tuner_policy.json": {
-      "bytes": 690541,
-      "sha256": "c1d1cee93f8a2c754d75053f9442468ab6168464ab5b214b459fd9962f201e4a"
+      "bytes": 1016722,
+      "sha256": "a8cb67dc843c6f2ab227c32f3f63687cd4354959e37e71d1dd16e0ca39aed7bd"
     },
     "validation/README.md": {
-      "bytes": 1078,
-      "sha256": "c5faf434017cfd5726a161b55462336f9bc4c6f93648f2172eb9f472b352c95e"
+      "bytes": 1067,
+      "sha256": "40aee1ee41230c95cf0ef5b6f892ad46a8273c561bed8fdc713e40dedefdf45c"
     },
     "validation/checked-content-MANIFEST.json": {
-      "bytes": 219277,
-      "sha256": "c8a53b3ab6fa8b6fcbd909c59c962de42fe50a2be51e5861debee1ccfe5049fb"
+      "bytes": 247738,
+      "sha256": "e1688ab03abe4bd9ef57d9a73a67b02a1a9da209e3203e43e5aac4725f6de686"
     },
     "validation/credential-scan.json": {
       "bytes": 201,
-      "sha256": "ba94204956b3cdc3ac7da67b7e081c545bc4a51c65f04e944ee3271e74d5b514"
+      "sha256": "b3c6309f1526640f714439cb12c76c157fce0e4e5199e4ef2d28f8eb19c29783"
     },
     "validation/report-replay.json": {
-      "bytes": 320,
-      "sha256": "5e0c93046ce009b285ad4a802127c436c5740effec8012d6ada49ef0f495291e"
+      "bytes": 319,
+      "sha256": "a840933a08c0e4abf0d19427431b83656d3f1b3272275c1350eb47090c72a899"
     },
     "validation/validation-source-manifest.json": {
-      "bytes": 399,
-      "sha256": "12e921a568764a3e753dc178982d96bc570d4bd2de1e749a88457d8c56da34ef"
+      "bytes": 31899,
+      "sha256": "f3c1b1dc4b2365b0d0ad859902f96ce7f3fa3b31c9cd2fb17e539faff40b2246"
     },
     "validation/validation.json": {
       "bytes": 298,
-      "sha256": "c8bd247bbb6b1b595fe73b0b833e5ad8ddb187041d0216505877f7b780901558"
+      "sha256": "8d90c4472468e6073f152276fb11679985072488df548ddd2a509c902cb0bd24"
     },
     "verify.py": {
-      "bytes": 3027,
-      "sha256": "c098cb4d4c6801a2d4024fabfe2e5a9d9e1523a60203723f774ada5df9a83dd6"
+      "bytes": 3545,
+      "sha256": "bc9658eb47266710fe27b29f701acf08c93ce811cf921161a590318d1342f9bd"
     }
   },
-  "full_v6e_study_complete": false,
+  "full_v6e_study_complete": true,
   "schema_version": 1,
-  "source_commit": "a51438948c7ad81dc7e1fbd92cc1e4e4298695cd"
+  "source_commit": "cc80ef32d8d1b1135fe7349fe34d5e321f858f8c"
 }

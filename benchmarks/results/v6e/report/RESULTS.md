@@ -1,5 +1,3 @@
-> INTERIM SNAPSHOT: 113/168 shapes; the experiment is still running.
-
 # Joint MM tuning results and decisions
 
 168 development geometries, separate FP32 and BF16 output. BF16 inputs/pre-adds; FP32 accumulation/reconstruction; final output store included in time and error.
@@ -123,7 +121,62 @@ All intervals are conditional on screening, with no multiple-comparison adjustme
 | 384 × 12288 × 65536 | Native | 1.3623 | 1.3623 | 1.0000 | 0.0000 | native_won_screening |
 | 384 × 65536 × 12288 | Native | 1.3628 | 1.3628 | 1.0000 | 0.0000 | native_won_screening |
 | 1536 × 131072 × 1536 | Native | 0.9945 | 0.9945 | 1.0000 | 0.0000 | native_won_screening |
+| 3072 × 32768 × 3072 | Native | 0.9724 | 0.9724 | 1.0000 | 0.0000 | native_won_screening |
+| 6144 × 131072 × 384 | Native | 1.3607 | 1.3607 | 1.0000 | 0.0000 | native_won_screening |
+| 7168 × 7168 × 7168 | S1 products; [1024, 512, 7168]; b2 | 1.1673 | 1.1077 | 1.0538 | 0.4471 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 1536 × 32768 × 8192 | Native | 1.2397 | 1.2397 | 1.0000 | 0.0000 | native_won_screening |
+| 6144 × 8192 × 8192 | S1 products; [1024, 512, 8192]; b2 | 1.2684 | 1.1988 | 1.0581 | 0.4407 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 6144 × 32768 × 2048 | S1 products; [2048, 2048, 1024]; b2 | 1.2361 | 1.1657 | 1.0604 | 0.4459 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 6144 × 8192 | S1 outputs; [2048, 1024, 6144]; b2 | 1.3007 | 1.1623 | 1.1191 | 0.4396 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 6144 | S1 outputs; [2048, 2048, 4096]; b2 | 1.2951 | 1.2037 | 1.0759 | 0.4400 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 32768 × 1536 | Native | 1.2428 | 1.2428 | 1.0000 | 0.0000 | native_won_screening |
+| 12288 × 2048 × 16384 | S1 products; [4096, 1024, 2048]; b2 | 1.2627 | 1.1934 | 1.0581 | 0.4439 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 1536 × 16384 | S1 products; [4096, 1024, 1536]; b2 | 1.2456 | 1.2016 | 1.0366 | 0.4387 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 24576 × 1536 × 12288 | S1 products; [4096, 1024, 1536]; b2 | 1.3363 | 1.3204 | 1.0120 | 0.4379 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8191 × 8191 × 8191 | Native | 1.5942 | 1.5942 | 1.0000 | 0.0000 | native_won_screening |
+| 8191 × 8192 × 8192 | Native | 1.6040 | 1.6040 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 8191 × 8192 | Native | 1.5939 | 1.5939 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 8192 × 8191 | Native | 1.5921 | 1.5921 | 1.0000 | 0.0000 | native_won_screening |
+| 2048 × 2048 × 131072 | S1 products; [2048, 2048, 2048]; b2 | 1.5278 | 1.4458 | 1.0567 | 0.4387 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 2048 × 131072 × 2048 | S1 products; [2048, 2048, 1024]; b2 | 1.5231 | 1.4324 | 1.0633 | 0.4478 | frozen_winner_passed_errors_and_confirmed_speed_margin |
 | 8192 × 8192 × 8192 | S1 outputs; [2048, 2048, 4096]; b2 | 1.5925 | 1.4867 | 1.0712 | 0.4439 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 131072 × 2048 × 2048 | S1 products; [2048, 2048, 2048]; b2 | 1.5257 | 1.4344 | 1.0637 | 0.4369 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 8193 | Native | 1.5957 | 1.5957 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 8193 × 8192 | Native | 1.6275 | 1.6275 | 1.0000 | 0.0000 | native_won_screening |
+| 8193 × 8192 × 8192 | Native | 1.5945 | 1.5945 | 1.0000 | 0.0000 | native_won_screening |
+| 8193 × 8193 × 8193 | Native | 1.6918 | 1.6918 | 1.0000 | 0.0000 | native_won_screening |
+| 1024 × 12288 × 49152 | S1 outputs; [1024, 512, 12288]; b2 | 1.6837 | 1.5598 | 1.0795 | 0.4399 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 1024 × 24576 × 24576 | S1 outputs; [1024, 512, 24576]; b2 | 1.7103 | 1.5638 | 1.0937 | 0.4427 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 3072 × 65536 × 3072 | Native | 1.6879 | 1.6879 | 1.0000 | 0.0000 | native_won_screening |
+| 24576 × 8192 × 3072 | Native | 1.7428 | 1.7428 | 1.0000 | 0.0000 | frozen_winner_did_not_clear_1_percent_mean_margin |
+| 9216 × 9216 × 9216 | S1 products; [1024, 512, 9216]; b2 | 2.2151 | 2.0017 | 1.1066 | 0.4415 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 2048 × 6144 × 65536 | S1 products; [2048, 1024, 6144]; b2 | 2.1518 | 1.9521 | 1.1023 | 0.4447 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 4096 × 12288 | S1 outputs; [2048, 2048, 4096]; b2 | 2.2533 | 2.0175 | 1.1169 | 0.4423 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 49152 × 4096 × 4096 | S1 outputs; [2048, 2048, 4096]; b2 | 2.1726 | 2.0323 | 1.0690 | 0.4413 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 49152 × 1536 | Native | 2.3916 | 2.3916 | 1.0000 | 0.0000 | native_won_screening |
+| 10240 × 10240 × 10240 | S1 products; [1024, 512, 10240]; b2 | 2.8470 | 2.6303 | 1.0824 | 0.4412 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 16383 | Native | 2.8957 | 2.8957 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 16383 × 8192 | Native | 2.8527 | 2.8527 | 1.0000 | 0.0000 | native_won_screening |
+| 16383 × 8192 × 8192 | Native | 2.8866 | 2.8866 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 8192 × 16385 | Native | 2.9558 | 2.9558 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 16385 × 8192 | Native | 2.9448 | 2.9448 | 1.0000 | 0.0000 | native_won_screening |
+| 16385 × 8192 × 8192 | Native | 2.9079 | 2.9079 | 1.0000 | 0.0000 | native_won_screening |
+| 3072 × 131072 × 3072 | Native | 3.0817 | 3.0817 | 1.0000 | 0.0000 | native_won_screening |
+| 8192 × 12288 × 12288 | S1 products; [2048, 2048, 3072]; b2 | 3.2832 | 2.9128 | 1.1272 | 0.4438 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 8192 × 12288 | S1 outputs; [2048, 2048, 4096]; b2 | 3.2292 | 2.9890 | 1.0804 | 0.4406 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 12288 × 8192 | S1 products; [2048, 2048, 3072]; b2 | 3.2668 | 2.9188 | 1.1192 | 0.4414 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 32768 × 24576 × 1536 | Native | 3.1703 | 3.1703 | 1.0000 | 0.0000 | native_won_screening |
+| 11264 × 11264 × 11264 | S1 products; [1024, 512, 11264]; b2 | 3.6810 | 3.3608 | 1.0953 | 0.4420 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 4096 × 131072 × 3072 | S1 products; [4096, 1024, 1024]; b2 | 4.1599 | 3.7166 | 1.1193 | 0.4429 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 4096 × 65536 × 8192 | S1 products; [2048, 2048, 1024]; b2 | 5.3118 | 4.9365 | 1.0760 | 0.4477 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 16384 × 16384 | S1 products; [1024, 512, 16384]; b2 | 5.4375 | 4.9194 | 1.1053 | 0.4426 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 8192 × 16384 | S1 outputs; [2048, 2048, 4096]; b2 | 5.4483 | 5.0517 | 1.0785 | 0.4393 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 16384 × 8192 | S1 outputs; [2048, 2048, 4096]; b2 | 5.3875 | 5.0102 | 1.0753 | 0.4463 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 14336 × 14336 × 14336 | S1 products; [1024, 512, 14336]; b2 | 7.4240 | 6.5680 | 1.1303 | 0.4431 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 15360 × 15360 × 15360 | S1 products; [1024, 512, 15360]; b2 | 8.6981 | 7.8992 | 1.1011 | 0.4472 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16383 × 16383 × 16383 | Native | 10.5444 | 10.5444 | 1.0000 | 0.0000 | native_won_screening |
+| 16384 × 16384 × 16384 | S1 products; [1024, 512, 16384]; b2 | 10.5241 | 9.5695 | 1.0998 | 0.4401 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16385 × 16385 × 16385 | Native | 10.9907 | 10.9907 | 1.0000 | 0.0000 | native_won_screening |
 
 ## bfloat16 output
 
@@ -241,7 +294,62 @@ All intervals are conditional on screening, with no multiple-comparison adjustme
 | 384 × 12288 × 65536 | Native | 1.3404 | 1.3404 | 1.0000 | 0.1669 | native_won_screening |
 | 384 × 65536 × 12288 | Native | 1.3638 | 1.3638 | 1.0000 | 0.1663 | native_won_screening |
 | 1536 × 131072 × 1536 | Native | 0.9855 | 0.9855 | 1.0000 | 0.1661 | native_won_screening |
+| 3072 × 32768 × 3072 | Native | 0.9842 | 0.9842 | 1.0000 | 0.1671 | native_won_screening |
+| 6144 × 131072 × 384 | Native | 1.3708 | 1.3708 | 1.0000 | 0.1676 | native_won_screening |
+| 7168 × 7168 × 7168 | Native | 1.1491 | 1.1491 | 1.0000 | 0.1676 | frozen_winner_speedup_not_resolved_by_paired_95_percent_interval |
+| 1536 × 32768 × 8192 | Native | 1.2444 | 1.2444 | 1.0000 | 0.1666 | native_won_screening |
+| 6144 × 8192 × 8192 | S1 products; [2048, 2048, 2048]; b2 | 1.2805 | 1.1633 | 1.1007 | 0.4735 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 6144 × 32768 × 2048 | S1 products; [2048, 2048, 1024]; b2 | 1.2211 | 1.1447 | 1.0667 | 0.4775 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 6144 × 8192 | S1 products; [2048, 1024, 6144]; b2 | 1.2483 | 1.1334 | 1.1014 | 0.4686 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 6144 | S1 products; [2048, 2048, 2048]; b2 | 1.2633 | 1.1712 | 1.0787 | 0.4695 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 32768 × 1536 | Native | 1.2277 | 1.2277 | 1.0000 | 0.1646 | native_won_screening |
+| 12288 × 2048 × 16384 | S1 products; [2048, 2048, 2048]; b2 | 1.2100 | 1.1247 | 1.0758 | 0.4757 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 1536 × 16384 | S1 outputs; [2048, 2048, 1536]; b2 | 1.2512 | 1.1717 | 1.0678 | 0.4741 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 24576 × 1536 × 12288 | S1 outputs; [2048, 2048, 1536]; b2 | 1.3650 | 1.2683 | 1.0762 | 0.4703 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8191 × 8191 × 8191 | Native | 1.5659 | 1.5659 | 1.0000 | 0.1673 | native_won_screening |
+| 8191 × 8192 × 8192 | Native | 1.5728 | 1.5728 | 1.0000 | 0.1670 | native_won_screening |
+| 8192 × 8191 × 8192 | Native | 1.5671 | 1.5671 | 1.0000 | 0.1689 | native_won_screening |
+| 8192 × 8192 × 8191 | Native | 1.5769 | 1.5769 | 1.0000 | 0.1686 | native_won_screening |
+| 2048 × 2048 × 131072 | S1 outputs; [2048, 2048, 2048]; b2 | 1.5197 | 1.3935 | 1.0906 | 0.4690 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 2048 × 131072 × 2048 | S1 products; [2048, 2048, 1024]; b2 | 1.5096 | 1.4035 | 1.0756 | 0.4806 | frozen_winner_passed_errors_and_confirmed_speed_margin |
 | 8192 × 8192 × 8192 | S1 outputs; [2048, 2048, 4096]; b2 | 1.6031 | 1.4979 | 1.0702 | 0.4744 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 131072 × 2048 × 2048 | S1 outputs; [2048, 2048, 2048]; b2 | 1.5486 | 1.4264 | 1.0856 | 0.4675 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 8193 | Native | 1.6208 | 1.6208 | 1.0000 | 0.1679 | native_won_screening |
+| 8192 × 8193 × 8192 | Native | 1.6698 | 1.6698 | 1.0000 | 0.1675 | native_won_screening |
+| 8193 × 8192 × 8192 | Native | 1.5852 | 1.5852 | 1.0000 | 0.1674 | native_won_screening |
+| 8193 × 8193 × 8193 | Native | 1.7050 | 1.7050 | 1.0000 | 0.1667 | native_won_screening |
+| 1024 × 12288 × 49152 | S1 outputs; [1024, 512, 12288]; b2 | 1.7048 | 1.5778 | 1.0805 | 0.4702 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 1024 × 24576 × 24576 | S1 products; [1024, 512, 24576]; b2 | 1.7254 | 1.5806 | 1.0916 | 0.4735 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 3072 × 65536 × 3072 | Native | 1.6785 | 1.6785 | 1.0000 | 0.1675 | native_won_screening |
+| 24576 × 8192 × 3072 | S1 products; [4096, 1024, 2048]; b2 | 1.7080 | 1.6357 | 1.0442 | 0.4662 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 9216 × 9216 × 9216 | S1 outputs; [1024, 512, 9216]; b2 | 2.1539 | 2.0060 | 1.0737 | 0.4732 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 2048 × 6144 × 65536 | S1 outputs; [1024, 512, 6144]; b2 | 2.1655 | 2.0507 | 1.0560 | 0.4743 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 4096 × 12288 | S1 products; [2048, 2048, 4096]; b2 | 2.2554 | 1.9749 | 1.1420 | 0.4729 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 49152 × 4096 × 4096 | S1 products; [2048, 2048, 4096]; b2 | 2.1511 | 1.9667 | 1.0938 | 0.4719 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 49152 × 1536 | Native | 2.3667 | 2.3667 | 1.0000 | 0.1673 | native_won_screening |
+| 10240 × 10240 × 10240 | S1 outputs; [1024, 2560, 5120]; b2 | 2.8041 | 2.5303 | 1.1082 | 0.4722 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 8192 × 16383 | Native | 2.8711 | 2.8711 | 1.0000 | 0.1661 | native_won_screening |
+| 8192 × 16383 × 8192 | Native | 2.8081 | 2.8081 | 1.0000 | 0.1687 | native_won_screening |
+| 16383 × 8192 × 8192 | Native | 2.8235 | 2.8235 | 1.0000 | 0.1675 | native_won_screening |
+| 8192 × 8192 × 16385 | Native | 2.9262 | 2.9262 | 1.0000 | 0.1669 | native_won_screening |
+| 8192 × 16385 × 8192 | Native | 2.9653 | 2.9653 | 1.0000 | 0.1671 | native_won_screening |
+| 16385 × 8192 × 8192 | Native | 2.8351 | 2.8351 | 1.0000 | 0.1682 | native_won_screening |
+| 3072 × 131072 × 3072 | Native | 3.0884 | 3.0884 | 1.0000 | 0.1660 | native_won_screening |
+| 8192 × 12288 × 12288 | S1 products; [2048, 2048, 3072]; b2 | 3.1889 | 2.9034 | 1.0983 | 0.4730 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 8192 × 12288 | S1 outputs; [2048, 2048, 4096]; b2 | 3.1895 | 2.9215 | 1.0917 | 0.4698 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 12288 × 12288 × 8192 | S1 products; [4096, 1024, 3072]; b2 | 3.1750 | 2.8520 | 1.1133 | 0.4710 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 32768 × 24576 × 1536 | Native | 3.1380 | 3.1380 | 1.0000 | 0.1676 | native_won_screening |
+| 11264 × 11264 × 11264 | S1 outputs; [1024, 512, 11264]; b2 | 3.6871 | 3.3377 | 1.1047 | 0.4718 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 4096 × 131072 × 3072 | S1 products; [4096, 1024, 1024]; b2 | 4.0235 | 3.7068 | 1.0854 | 0.4740 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 4096 × 65536 × 8192 | S1 products; [4096, 1024, 1024]; b2 | 5.2954 | 4.8951 | 1.0818 | 0.4767 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 8192 × 16384 × 16384 | S1 outputs; [2048, 2048, 4096]; b2 | 5.3090 | 4.8837 | 1.0871 | 0.4727 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 8192 × 16384 | S1 outputs; [2048, 2048, 4096]; b2 | 5.3554 | 4.9481 | 1.0823 | 0.4703 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16384 × 16384 × 8192 | S1 outputs; [2048, 2048, 4096]; b2 | 5.4049 | 4.8987 | 1.1033 | 0.4779 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 14336 × 14336 × 14336 | S1 products; [2048, 2048, 3584]; b2 | 7.1713 | 6.3865 | 1.1229 | 0.4733 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 15360 × 15360 × 15360 | S1 products; [1024, 512, 15360]; b2 | 8.6730 | 7.8885 | 1.0994 | 0.4771 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16383 × 16383 × 16383 | Native | 10.4967 | 10.4967 | 1.0000 | 0.1667 | native_won_screening |
+| 16384 × 16384 × 16384 | S1 outputs; [2048, 2048, 4096]; b2 | 10.4876 | 9.4561 | 1.1091 | 0.4809 | frozen_winner_passed_errors_and_confirmed_speed_margin |
+| 16385 × 16385 × 16385 | Native | 10.8938 | 10.8938 | 1.0000 | 0.1667 | native_won_screening |
 
 ## All five method timings
 
@@ -471,8 +579,118 @@ All intervals are conditional on screening, with no multiple-comparison adjustme
 | shape_m384_k65536_n12288 | bfloat16 | 1.3638 | 1.3638 | 2.4614 | 2.4306 | 2.5184 |
 | shape_m1536_k131072_n1536 | float32 | 1.0118 | 0.9945 | 2.1099 | 2.1001 | 2.4363 |
 | shape_m1536_k131072_n1536 | bfloat16 | 1.0101 | 0.9855 | 2.0954 | 2.0964 | 2.4286 |
+| shape_m3072_k32768_n3072 | float32 | 1.0348 | 0.9724 | 1.0668 | 1.0644 | 1.1413 |
+| shape_m3072_k32768_n3072 | bfloat16 | 1.0481 | 0.9842 | 1.1262 | 1.0711 | 1.1266 |
+| shape_m6144_k131072_n384 | float32 | 1.4252 | 1.3607 | 2.1138 | 2.0754 | 2.5266 |
+| shape_m6144_k131072_n384 | bfloat16 | 1.4620 | 1.3708 | 2.1100 | 2.0739 | 2.5250 |
+| shape_m7168_k7168_n7168 | float32 | 1.3186 | 1.1673 | 1.1821 | 1.1077 | 1.2765 |
+| shape_m7168_k7168_n7168 | bfloat16 | 1.2755 | 1.1491 | 1.1697 | 1.1159 | 1.2717 |
+| shape_m1536_k32768_n8192 | float32 | 1.3905 | 1.2397 | 1.9697 | 1.7369 | 1.9476 |
+| shape_m1536_k32768_n8192 | bfloat16 | 1.3971 | 1.2444 | 1.9567 | 1.6952 | 1.9023 |
+| shape_m6144_k8192_n8192 | float32 | 1.4504 | 1.2684 | 1.2677 | 1.1988 | 1.2810 |
+| shape_m6144_k8192_n8192 | bfloat16 | 1.4090 | 1.2805 | 1.2638 | 1.1633 | 1.2573 |
+| shape_m6144_k32768_n2048 | float32 | 1.3682 | 1.2361 | 1.2604 | 1.1657 | 1.3536 |
+| shape_m6144_k32768_n2048 | bfloat16 | 1.3557 | 1.2211 | 1.2920 | 1.1447 | 1.3340 |
+| shape_m8192_k6144_n8192 | float32 | 1.4590 | 1.3007 | 1.2438 | 1.1623 | 1.1968 |
+| shape_m8192_k6144_n8192 | bfloat16 | 1.4005 | 1.2483 | 1.2143 | 1.1334 | 1.1641 |
+| shape_m8192_k8192_n6144 | float32 | 1.4217 | 1.2951 | 1.2655 | 1.2037 | 1.2683 |
+| shape_m8192_k8192_n6144 | bfloat16 | 1.3892 | 1.2633 | 1.2850 | 1.1712 | 1.1930 |
+| shape_m8192_k32768_n1536 | float32 | 1.3480 | 1.2428 | 1.8884 | 1.7014 | 2.0807 |
+| shape_m8192_k32768_n1536 | bfloat16 | 1.3332 | 1.2277 | 1.8164 | 1.6393 | 1.8886 |
+| shape_m12288_k2048_n16384 | float32 | 1.3144 | 1.2627 | 1.2563 | 1.1934 | 1.2950 |
+| shape_m12288_k2048_n16384 | bfloat16 | 1.3039 | 1.2100 | 1.1999 | 1.1247 | 1.2187 |
+| shape_m16384_k1536_n16384 | float32 | 1.2606 | 1.2456 | 1.2349 | 1.2016 | 1.5381 |
+| shape_m16384_k1536_n16384 | bfloat16 | 1.2489 | 1.2512 | 1.2209 | 1.1717 | 1.5037 |
+| shape_m24576_k1536_n12288 | float32 | 1.3934 | 1.3363 | 1.3672 | 1.3204 | 1.7130 |
+| shape_m24576_k1536_n12288 | bfloat16 | 1.3963 | 1.3650 | 1.3339 | 1.2683 | 1.6518 |
+| shape_m8191_k8191_n8191 | float32 | 1.8178 | 1.5942 | 1.9729 | 1.8969 | 2.1425 |
+| shape_m8191_k8191_n8191 | bfloat16 | 1.7498 | 1.5659 | 1.9596 | 1.8693 | 2.0978 |
+| shape_m8191_k8192_n8192 | float32 | 1.8241 | 1.6040 | 1.7927 | 1.6910 | 1.7941 |
+| shape_m8191_k8192_n8192 | bfloat16 | 1.7507 | 1.5728 | 1.7718 | 1.6416 | 1.6824 |
+| shape_m8192_k8191_n8192 | float32 | 1.8144 | 1.5939 | 1.9747 | 1.8949 | 2.1388 |
+| shape_m8192_k8191_n8192 | bfloat16 | 1.7547 | 1.5671 | 1.9726 | 1.8740 | 2.0976 |
+| shape_m8192_k8192_n8191 | float32 | 1.8161 | 1.5921 | 1.7765 | 1.6781 | 1.7891 |
+| shape_m8192_k8192_n8191 | bfloat16 | 1.7545 | 1.5769 | 1.8231 | 1.6433 | 1.6726 |
+| shape_m2048_k2048_n131072 | float32 | 1.5709 | 1.5278 | 1.5278 | 1.4458 | 1.6685 |
+| shape_m2048_k2048_n131072 | bfloat16 | 1.5458 | 1.5197 | 1.4895 | 1.3935 | 1.6312 |
+| shape_m2048_k131072_n2048 | float32 | 1.5869 | 1.5231 | 1.5474 | 1.4324 | 1.6705 |
+| shape_m2048_k131072_n2048 | bfloat16 | 1.6468 | 1.5096 | 1.5630 | 1.4035 | 1.6523 |
 | shape_m8192_k8192_n8192 | float32 | 1.8067 | 1.5925 | 1.5889 | 1.4867 | 1.6003 |
 | shape_m8192_k8192_n8192 | bfloat16 | 1.7772 | 1.6031 | 1.6133 | 1.4979 | 1.5131 |
+| shape_m131072_k2048_n2048 | float32 | 1.5716 | 1.5257 | 1.5105 | 1.4344 | 1.6629 |
+| shape_m131072_k2048_n2048 | bfloat16 | 1.5767 | 1.5486 | 1.5309 | 1.4264 | 1.5861 |
+| shape_m8192_k8192_n8193 | float32 | 1.8429 | 1.5957 | 2.8948 | 2.7672 | 2.9597 |
+| shape_m8192_k8192_n8193 | bfloat16 | 1.8281 | 1.6208 | 2.5621 | 2.4275 | 2.5011 |
+| shape_m8192_k8193_n8192 | float32 | 1.9351 | 1.6275 | 2.2964 | 2.2102 | 2.4925 |
+| shape_m8192_k8193_n8192 | bfloat16 | 1.8962 | 1.6698 | 2.2722 | 2.1933 | 2.4619 |
+| shape_m8193_k8192_n8192 | float32 | 1.8019 | 1.5945 | 2.3182 | 2.2194 | 2.5109 |
+| shape_m8193_k8192_n8192 | bfloat16 | 1.7565 | 1.5852 | 2.1456 | 2.0414 | 2.2930 |
+| shape_m8193_k8193_n8193 | float32 | 1.9383 | 1.6918 | 2.7628 | 2.6470 | 3.1234 |
+| shape_m8193_k8193_n8193 | bfloat16 | 1.9061 | 1.7050 | 2.5798 | 2.4568 | 2.9109 |
+| shape_m1024_k12288_n49152 | float32 | 1.7907 | 1.6837 | 1.6787 | 1.5598 | 1.8671 |
+| shape_m1024_k12288_n49152 | bfloat16 | 1.7881 | 1.7048 | 1.7229 | 1.5778 | 1.8865 |
+| shape_m1024_k24576_n24576 | float32 | 1.7969 | 1.7103 | 1.7139 | 1.5638 | 1.9510 |
+| shape_m1024_k24576_n24576 | bfloat16 | 1.8155 | 1.7254 | 1.8392 | 1.5806 | 1.9708 |
+| shape_m3072_k65536_n3072 | float32 | 1.8306 | 1.6879 | 2.1053 | 2.0731 | 2.2884 |
+| shape_m3072_k65536_n3072 | bfloat16 | 1.8255 | 1.6785 | 2.1402 | 2.0687 | 2.2799 |
+| shape_m24576_k8192_n3072 | float32 | 2.0259 | 1.7428 | 1.8652 | 1.7834 | 1.7951 |
+| shape_m24576_k8192_n3072 | bfloat16 | 1.9331 | 1.7080 | 1.8438 | 1.6357 | 1.6534 |
+| shape_m9216_k9216_n9216 | float32 | 2.3976 | 2.2151 | 2.1426 | 2.0017 | 2.3543 |
+| shape_m9216_k9216_n9216 | bfloat16 | 2.3530 | 2.1539 | 2.1557 | 2.0060 | 2.3298 |
+| shape_m2048_k6144_n65536 | float32 | 2.2291 | 2.1518 | 2.1268 | 1.9521 | 2.0539 |
+| shape_m2048_k6144_n65536 | bfloat16 | 2.2424 | 2.1655 | 2.1773 | 2.0507 | 2.0389 |
+| shape_m16384_k4096_n12288 | float32 | 2.7937 | 2.2533 | 2.1998 | 2.0175 | 2.1796 |
+| shape_m16384_k4096_n12288 | bfloat16 | 2.6535 | 2.2554 | 2.1476 | 1.9749 | 2.1843 |
+| shape_m49152_k4096_n4096 | float32 | 2.3774 | 2.1726 | 2.3470 | 2.0323 | 2.1986 |
+| shape_m49152_k4096_n4096 | bfloat16 | 2.2355 | 2.1511 | 2.1463 | 1.9667 | 2.1630 |
+| shape_m12288_k49152_n1536 | float32 | 2.5936 | 2.3916 | 3.5468 | 3.2552 | 3.8307 |
+| shape_m12288_k49152_n1536 | bfloat16 | 2.5835 | 2.3667 | 3.5068 | 3.1655 | 3.7420 |
+| shape_m10240_k10240_n10240 | float32 | 3.1817 | 2.8470 | 2.7632 | 2.6303 | 2.9104 |
+| shape_m10240_k10240_n10240 | bfloat16 | 3.1000 | 2.8041 | 2.8074 | 2.5303 | 2.7221 |
+| shape_m8192_k8192_n16383 | float32 | 3.3625 | 2.8957 | 3.1962 | 3.0464 | 3.2913 |
+| shape_m8192_k8192_n16383 | bfloat16 | 3.2471 | 2.8711 | 3.2199 | 2.9934 | 3.0632 |
+| shape_m8192_k16383_n8192 | float32 | 3.2307 | 2.8527 | 3.6855 | 3.4440 | 5.9189 |
+| shape_m8192_k16383_n8192 | bfloat16 | 3.1826 | 2.8081 | 3.6718 | 3.4236 | 5.8625 |
+| shape_m16383_k8192_n8192 | float32 | 3.3962 | 2.8866 | 3.3033 | 3.0822 | 3.3247 |
+| shape_m16383_k8192_n8192 | bfloat16 | 3.2663 | 2.8235 | 3.2890 | 3.0055 | 3.0794 |
+| shape_m8192_k8192_n16385 | float32 | 3.4474 | 2.9558 | 5.3701 | 5.1445 | 5.4890 |
+| shape_m8192_k8192_n16385 | bfloat16 | 3.3212 | 2.9262 | 4.6761 | 4.4050 | 4.5272 |
+| shape_m8192_k16385_n8192 | float32 | 3.4892 | 2.9448 | 4.2063 | 3.9862 | 6.5357 |
+| shape_m8192_k16385_n8192 | bfloat16 | 3.4565 | 2.9653 | 4.1976 | 3.9656 | 6.4603 |
+| shape_m16385_k8192_n8192 | float32 | 3.3995 | 2.9079 | 4.2217 | 4.0634 | 4.4011 |
+| shape_m16385_k8192_n8192 | bfloat16 | 3.2723 | 2.8351 | 3.8349 | 3.6886 | 3.9575 |
+| shape_m3072_k131072_n3072 | float32 | 3.3896 | 3.0817 | 3.9315 | 3.8717 | 4.3143 |
+| shape_m3072_k131072_n3072 | bfloat16 | 3.3705 | 3.0884 | 4.0009 | 3.8588 | 4.2975 |
+| shape_m8192_k12288_n12288 | float32 | 3.6361 | 3.2832 | 3.0829 | 2.9128 | 3.1842 |
+| shape_m8192_k12288_n12288 | bfloat16 | 3.5832 | 3.1889 | 3.2283 | 2.9034 | 3.0003 |
+| shape_m12288_k8192_n12288 | float32 | 3.7265 | 3.2292 | 3.1985 | 2.9890 | 3.2787 |
+| shape_m12288_k8192_n12288 | bfloat16 | 3.6117 | 3.1895 | 3.2006 | 2.9215 | 3.0132 |
+| shape_m12288_k12288_n8192 | float32 | 3.6142 | 3.2668 | 3.0857 | 2.9188 | 3.1821 |
+| shape_m12288_k12288_n8192 | bfloat16 | 3.5458 | 3.1750 | 3.2673 | 2.8520 | 2.9948 |
+| shape_m32768_k24576_n1536 | float32 | 3.2531 | 3.1703 | 4.4792 | 4.2850 | 4.3641 |
+| shape_m32768_k24576_n1536 | bfloat16 | 3.2550 | 3.1380 | 4.4084 | 4.0257 | 4.1158 |
+| shape_m11264_k11264_n11264 | float32 | 4.2533 | 3.6810 | 3.6973 | 3.3608 | 3.9687 |
+| shape_m11264_k11264_n11264 | bfloat16 | 4.1357 | 3.6871 | 3.6316 | 3.3377 | 3.9166 |
+| shape_m4096_k131072_n3072 | float32 | 4.5064 | 4.1599 | 4.1661 | 3.7166 | 4.5862 |
+| shape_m4096_k131072_n3072 | bfloat16 | 4.5072 | 4.0235 | 4.2285 | 3.7068 | 4.5826 |
+| shape_m4096_k65536_n8192 | float32 | 6.0002 | 5.3118 | 5.4687 | 4.9365 | 5.9433 |
+| shape_m4096_k65536_n8192 | bfloat16 | 5.9591 | 5.2954 | 5.6131 | 4.8951 | 5.9100 |
+| shape_m8192_k16384_n16384 | float32 | 6.2234 | 5.4375 | 5.4234 | 4.9194 | 5.4982 |
+| shape_m8192_k16384_n16384 | bfloat16 | 6.0919 | 5.3090 | 5.4226 | 4.8837 | 5.3022 |
+| shape_m16384_k8192_n16384 | float32 | 6.4546 | 5.4483 | 5.3896 | 5.0517 | 5.5392 |
+| shape_m16384_k8192_n16384 | bfloat16 | 6.2515 | 5.3554 | 5.4332 | 4.9481 | 5.1100 |
+| shape_m16384_k16384_n8192 | float32 | 6.2084 | 5.3875 | 5.5321 | 5.0102 | 5.4855 |
+| shape_m16384_k16384_n8192 | bfloat16 | 6.1055 | 5.4049 | 5.5781 | 4.8987 | 5.3079 |
+| shape_m14336_k14336_n14336 | float32 | 8.3468 | 7.4240 | 6.9283 | 6.5680 | 7.1311 |
+| shape_m14336_k14336_n14336 | bfloat16 | 8.2045 | 7.1713 | 7.2353 | 6.3865 | 6.8297 |
+| shape_m15360_k15360_n15360 | float32 | 9.8201 | 8.6981 | 8.8249 | 7.8992 | 10.2323 |
+| shape_m15360_k15360_n15360 | bfloat16 | 9.6482 | 8.6730 | 8.7958 | 7.8885 | 10.2065 |
+| shape_m16383_k16383_n16383 | float32 | 12.1157 | 10.5444 | 12.1201 | 11.1280 | 21.3070 |
+| shape_m16383_k16383_n16383 | bfloat16 | 11.8789 | 10.4967 | 12.0611 | 11.0434 | 21.0865 |
+| shape_m16384_k16384_n16384 | float32 | 12.1272 | 10.5241 | 10.5057 | 9.5695 | 10.0942 |
+| shape_m16384_k16384_n16384 | bfloat16 | 11.9036 | 10.4876 | 10.5509 | 9.4561 | 9.6097 |
+| shape_m16385_k16385_n16385 | float32 | 12.5626 | 10.9907 | 14.9385 | 14.2104 | 26.7587 |
+| shape_m16385_k16385_n16385 | bfloat16 | 12.3723 | 10.8938 | 14.1521 | 13.1279 | 26.0063 |
 
 ## Why each depth chose its configuration
 
@@ -2494,6 +2712,330 @@ Counterfactuals below change only accumulator strategy or buffer count at the se
   - other_accumulator: 1.0205× [1.0176, 1.0238].
   - other_buffers: 1.8735× [1.8696, 1.8771].
 
+### shape_m3072_k32768_n3072__float32
+
+- S1: S1 products; [1024, 1024, 8192]; b2; confirmed 1.0644 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0025× [0.9999, 1.0050].
+  - other_buffers: 1.6632× [1.6518, 1.6721].
+- S2: S2 outputs; [1024, 1024, 8192]; b2; confirmed 1.1413 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9885× [0.9849, 0.9919].
+  - other_buffers: 1.6738× [1.6614, 1.6851].
+
+### shape_m3072_k32768_n3072__bfloat16
+
+- S1: S1 products; [1024, 1024, 8192]; b2; confirmed 1.0711 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0004× [0.9946, 1.0058].
+  - other_buffers: 1.6561× [1.6479, 1.6636].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 1.1266 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0035× [0.9983, 1.0073].
+  - other_buffers: 1.6837× [1.6720, 1.6930].
+
+### shape_m6144_k131072_n384__float32
+
+- S1: S1 products; [1024, 512, 1024]; b2; confirmed 2.0754 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0366× [1.0337, 1.0398].
+  - other_buffers: 1.7182× [1.7108, 1.7251].
+- S2: S2 products; [1024, 512, 1024]; b2; confirmed 2.5266 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1129× [1.1111, 1.1147].
+  - other_buffers: 1.7762× [1.7713, 1.7805].
+
+### shape_m6144_k131072_n384__bfloat16
+
+- S1: S1 products; [1024, 512, 1024]; b2; confirmed 2.0739 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0136× [1.0103, 1.0168].
+  - other_buffers: 1.7160× [1.7127, 1.7195].
+- S2: S2 products; [1024, 512, 1024]; b2; confirmed 2.5250 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0623× [1.0601, 1.0644].
+  - other_buffers: 1.7787× [1.7744, 1.7841].
+
+### shape_m7168_k7168_n7168__float32
+
+- S1: S1 products; [1024, 512, 7168]; b2; confirmed 1.1077 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0116× [1.0066, 1.0158].
+  - other_buffers: 1.6744× [1.6652, 1.6875].
+- S2: S2 products; [1024, 1024, 7168]; b2; confirmed 1.2765 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0175× [1.0124, 1.0230].
+  - other_buffers: 1.5406× [1.5319, 1.5499].
+
+### shape_m7168_k7168_n7168__bfloat16
+
+- S1: S1 products; [1024, 512, 7168]; b2; confirmed 1.1159 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9851× [0.9433, 1.0035].
+  - other_buffers: 1.5806× [1.5158, 1.6079].
+- S2: S2 outputs; [1024, 1024, 7168]; b2; confirmed 1.2717 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9815× [0.9340, 1.0062].
+  - other_buffers: 1.4757× [1.4053, 1.5100].
+
+### shape_m1536_k32768_n8192__float32
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.7369 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0944× [1.0911, 1.0980].
+  - other_buffers: 1.4731× [1.4690, 1.4766].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.9476 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0724× [1.0552, 1.0806].
+  - other_buffers: 1.4137× [1.3917, 1.4238].
+
+### shape_m1536_k32768_n8192__bfloat16
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.6952 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0246× [1.0099, 1.0615].
+  - other_buffers: 1.5006× [1.4963, 1.5052].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.9023 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1207× [1.1165, 1.1241].
+  - other_buffers: 1.4344× [1.4292, 1.4384].
+
+### shape_m6144_k8192_n8192__float32
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 1.1988 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0081× [1.0002, 1.0225].
+  - other_buffers: 1.6278× [1.6212, 1.6344].
+- S2: S2 products; [2048, 2048, 2048]; b2; confirmed 1.2810 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0832× [1.0789, 1.0875].
+  - other_buffers: 1.5153× [1.5022, 1.5444].
+
+### shape_m6144_k8192_n8192__bfloat16
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.1633 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0043× [0.9993, 1.0097].
+  - other_buffers: 1.5425× [1.5318, 1.5520].
+- S2: S2 products; [2048, 2048, 2048]; b2; confirmed 1.2573 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0329× [1.0076, 1.0465].
+  - other_buffers: 1.4735× [1.4399, 1.4912].
+
+### shape_m6144_k32768_n2048__float32
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.1657 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1222× [1.1145, 1.1285].
+  - other_buffers: 1.5137× [1.5048, 1.5218].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.3536 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0870× [1.0795, 1.0925].
+  - other_buffers: 1.4330× [1.4241, 1.4414].
+
+### shape_m6144_k32768_n2048__bfloat16
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.1447 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0325× [1.0178, 1.0680].
+  - other_buffers: 1.5302× [1.5231, 1.5368].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.3340 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1294× [1.1237, 1.1351].
+  - other_buffers: 1.4430× [1.4355, 1.4500].
+
+### shape_m8192_k6144_n8192__float32
+
+- S1: S1 outputs; [2048, 1024, 6144]; b2; confirmed 1.1623 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9985× [0.9952, 1.0022].
+  - other_buffers: 1.4276× [1.4205, 1.4361].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 1.1968 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0016× [0.9985, 1.0046].
+  - other_buffers: 1.4185× [1.4128, 1.4244].
+
+### shape_m8192_k6144_n8192__bfloat16
+
+- S1: S1 products; [2048, 1024, 6144]; b2; confirmed 1.1334 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9971× [0.9907, 1.0024].
+  - other_buffers: 1.3722× [1.3637, 1.3802].
+- S2: S2 outputs; [2048, 1024, 6144]; b2; confirmed 1.1641 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0023× [0.9950, 1.0108].
+  - other_buffers: 1.3637× [1.3564, 1.3695].
+
+### shape_m8192_k8192_n6144__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 1.2037 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5360× [1.4933, 1.5587].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.2683 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0933× [1.0890, 1.0980].
+  - other_buffers: 1.5721× [1.5621, 1.5825].
+
+### shape_m8192_k8192_n6144__bfloat16
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.1712 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0060× [0.9977, 1.0126].
+  - other_buffers: 1.5422× [1.5315, 1.5520].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.1930 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0483× [1.0451, 1.0515].
+  - other_buffers: 1.6164× [1.6038, 1.6290].
+
+### shape_m8192_k32768_n1536__float32
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 1.7014 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1390× [1.1229, 1.1830].
+  - other_buffers: 1.5819× [1.5763, 1.5883].
+- S2: S2 outputs; [1024, 1024, 8192]; b2; confirmed 2.0807 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9895× [0.9879, 0.9912].
+  - other_buffers: 1.6578× [1.6529, 1.6626].
+
+### shape_m8192_k32768_n1536__bfloat16
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.6393 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0188× [1.0152, 1.0220].
+  - other_buffers: 1.4894× [1.4849, 1.4943].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.8886 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1214× [1.1164, 1.1282].
+  - other_buffers: 1.4220× [1.4183, 1.4266].
+
+### shape_m12288_k2048_n16384__float32
+
+- S1: S1 products; [4096, 1024, 2048]; b2; confirmed 1.1934 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0171× [1.0131, 1.0211].
+  - other_buffers: 1.3010× [1.2924, 1.3114].
+- S2: S2 outputs; [4096, 1024, 2048]; b2; confirmed 1.2950 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0151× [1.0115, 1.0193].
+  - other_buffers: 1.2743× [1.2685, 1.2803].
+
+### shape_m12288_k2048_n16384__bfloat16
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.1247 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9999× [0.9943, 1.0058].
+  - other_buffers: 1.5607× [1.5543, 1.5674].
+- S2: S2 outputs; [4096, 1024, 2048]; b2; confirmed 1.2187 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0116× [1.0020, 1.0297].
+  - other_buffers: 1.3012× [1.2926, 1.3085].
+
+### shape_m16384_k1536_n16384__float32
+
+- S1: S1 products; [4096, 1024, 1536]; b2; confirmed 1.2016 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0509× [1.0270, 1.0613].
+  - other_buffers: 1.3176× [1.2863, 1.3321].
+- S2: S2 outputs; [4096, 1024, 1536]; b2; confirmed 1.5381 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0105× [1.0069, 1.0145].
+  - other_buffers: 1.2602× [1.2565, 1.2638].
+
+### shape_m16384_k1536_n16384__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 1536]; b2; confirmed 1.1717 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9767× [0.9231, 1.0049].
+  - other_buffers: 1.5475× [1.4675, 1.5842].
+- S2: S2 outputs; [4096, 1024, 1536]; b2; confirmed 1.5037 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9994× [0.9726, 1.0114].
+  - other_buffers: 1.2615× [1.2263, 1.2781].
+
+### shape_m24576_k1536_n12288__float32
+
+- S1: S1 products; [4096, 1024, 1536]; b2; confirmed 1.3204 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0582× [1.0551, 1.0612].
+  - other_buffers: 1.3410× [1.3374, 1.3449].
+- S2: S2 outputs; [4096, 1024, 1536]; b2; confirmed 1.7130 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0028× [0.9715, 1.0154].
+  - other_buffers: 1.2751× [1.2257, 1.3239].
+
+### shape_m24576_k1536_n12288__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 1536]; b2; confirmed 1.2683 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0004× [0.9966, 1.0045].
+  - other_buffers: 1.6157× [1.6084, 1.6232].
+- S2: S2 outputs; [4096, 1024, 1536]; b2; confirmed 1.6518 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0098× [1.0066, 1.0128].
+  - other_buffers: 1.2839× [1.2788, 1.2884].
+
+### shape_m8191_k8191_n8191__float32
+
+- S1: S1 outputs; [1024, 512, 8192]; b2; confirmed 1.8969 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9944× [0.9923, 0.9970].
+  - other_buffers: 1.5262× [1.5233, 1.5290].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 2.1425 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0111× [1.0065, 1.0168].
+  - other_buffers: 1.4407× [1.4372, 1.4435].
+
+### shape_m8191_k8191_n8191__bfloat16
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 1.8693 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9975× [0.9956, 0.9993].
+  - other_buffers: 1.4893× [1.4856, 1.4930].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 2.0978 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0012× [0.9985, 1.0032].
+  - other_buffers: 1.4195× [1.4163, 1.4220].
+
+### shape_m8191_k8192_n8192__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 1.6910 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5201× [1.5143, 1.5253].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.7941 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0865× [1.0837, 1.0893].
+  - other_buffers: 1.5359× [1.5311, 1.5416].
+
+### shape_m8191_k8192_n8192__bfloat16
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.6416 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0070× [1.0043, 1.0096].
+  - other_buffers: 1.5148× [1.5107, 1.5188].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.6824 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0398× [1.0287, 1.0469].
+  - other_buffers: 1.5698× [1.5522, 1.5818].
+
+### shape_m8192_k8191_n8192__float32
+
+- S1: S1 outputs; [1024, 512, 8192]; b2; confirmed 1.8949 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9956× [0.9928, 0.9986].
+  - other_buffers: 1.5249× [1.5215, 1.5284].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 2.1388 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0108× [1.0089, 1.0131].
+  - other_buffers: 1.4404× [1.4376, 1.4430].
+
+### shape_m8192_k8191_n8192__bfloat16
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 1.8740 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9981× [0.9810, 1.0140].
+  - other_buffers: 1.4827× [1.4607, 1.4919].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 2.0976 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9994× [0.9954, 1.0035].
+  - other_buffers: 1.4225× [1.4155, 1.4369].
+
+### shape_m8192_k8192_n8191__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 1.6781 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5235× [1.5206, 1.5261].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.7891 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0854× [1.0837, 1.0872].
+  - other_buffers: 1.5351× [1.5327, 1.5379].
+
+### shape_m8192_k8192_n8191__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 1.6433 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.4801× [1.4756, 1.4844].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.6726 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0469× [1.0439, 1.0502].
+  - other_buffers: 1.5806× [1.5775, 1.5835].
+
+### shape_m2048_k2048_n131072__float32
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.4458 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0279× [1.0254, 1.0305].
+  - other_buffers: 1.5556× [1.5516, 1.5605].
+- S2: S2 products; [2048, 1024, 2048]; b2; confirmed 1.6685 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0054× [1.0021, 1.0089].
+  - other_buffers: 1.5083× [1.5023, 1.5151].
+
+### shape_m2048_k2048_n131072__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 2048]; b2; confirmed 1.3935 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0035× [1.0008, 1.0062].
+  - other_buffers: 1.5710× [1.5673, 1.5742].
+- S2: S2 products; [2048, 2048, 2048]; b2; confirmed 1.6312 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0036× [0.9987, 1.0092].
+  - other_buffers: 1.4785× [1.4725, 1.4834].
+
+### shape_m2048_k131072_n2048__float32
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.4324 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1333× [1.1024, 1.1487].
+  - other_buffers: 1.5378× [1.4988, 1.5544].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.6705 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1033× [1.1007, 1.1058].
+  - other_buffers: 1.4604× [1.4565, 1.4655].
+
+### shape_m2048_k131072_n2048__bfloat16
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 1.4035 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0241× [1.0207, 1.0280].
+  - other_buffers: 1.5585× [1.5546, 1.5625].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 1.6523 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1398× [1.1362, 1.1447].
+  - other_buffers: 1.4655× [1.4615, 1.4694].
+
 ### shape_m8192_k8192_n8192__float32
 
 - S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 1.4867 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
@@ -2512,10 +3054,676 @@ Counterfactuals below change only accumulator strategy or buffer count at the se
   - other_accumulator: 1.0490× [1.0439, 1.0544].
   - other_buffers: 1.6465× [1.6402, 1.6530].
 
+### shape_m131072_k2048_n2048__float32
+
+- S1: S1 products; [2048, 2048, 2048]; b2; confirmed 1.4344 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0261× [1.0232, 1.0285].
+  - other_buffers: 1.5762× [1.5717, 1.5801].
+- S2: S2 outputs; [2048, 2048, 2048]; b2; confirmed 1.6629 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0137× [1.0114, 1.0158].
+  - other_buffers: 1.4852× [1.4817, 1.4887].
+
+### shape_m131072_k2048_n2048__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 2048]; b2; confirmed 1.4264 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0033× [1.0000, 1.0066].
+  - other_buffers: 1.5622× [1.5586, 1.5656].
+- S2: S2 outputs; [4096, 1024, 2048]; b2; confirmed 1.5861 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0044× [1.0019, 1.0071].
+  - other_buffers: 1.5461× [1.5419, 1.5497].
+
+### shape_m8192_k8192_n8193__float32
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 2.7672 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0029× [1.0002, 1.0059].
+  - other_buffers: 1.3909× [1.3879, 1.3935].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 2.9597 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0578× [1.0562, 1.0594].
+  - other_buffers: 1.3683× [1.3656, 1.3723].
+
+### shape_m8192_k8192_n8193__bfloat16
+
+- S1: S1 outputs; [1024, 512, 8192]; b2; confirmed 2.4275 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0024× [1.0000, 1.0051].
+  - other_buffers: 1.4093× [1.4052, 1.4131].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 2.5011 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0348× [1.0323, 1.0369].
+  - other_buffers: 1.4433× [1.4402, 1.4460].
+
+### shape_m8192_k8193_n8192__float32
+
+- S1: S1 outputs; [1024, 512, 8704]; b2; confirmed 2.2102 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9972× [0.9952, 0.9992].
+  - other_buffers: 1.4838× [1.4809, 1.4869].
+- S2: S2 products; [1024, 1024, 8704]; b2; confirmed 2.4925 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0097× [1.0070, 1.0125].
+  - other_buffers: 1.4039× [1.3995, 1.4071].
+
+### shape_m8192_k8193_n8192__bfloat16
+
+- S1: S1 products; [1024, 1024, 8704]; b2; confirmed 2.1933 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9985× [0.9948, 1.0011].
+  - other_buffers: 1.4126× [1.4044, 1.4189].
+- S2: S2 products; [1024, 1024, 8704]; b2; confirmed 2.4619 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9980× [0.9967, 0.9992].
+  - other_buffers: 1.3791× [1.3770, 1.3816].
+
+### shape_m8193_k8192_n8192__float32
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 2.2194 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0057× [1.0036, 1.0079].
+  - other_buffers: 1.5080× [1.5031, 1.5143].
+- S2: S2 products; [1024, 1024, 8192]; b2; confirmed 2.5109 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0095× [1.0071, 1.0119].
+  - other_buffers: 1.4242× [1.4207, 1.4272].
+
+### shape_m8193_k8192_n8192__bfloat16
+
+- S1: S1 outputs; [1024, 512, 8192]; b2; confirmed 2.0414 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0011× [0.9982, 1.0039].
+  - other_buffers: 1.5111× [1.5060, 1.5157].
+- S2: S2 products; [2048, 1024, 4096]; b2; confirmed 2.2930 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0180× [1.0144, 1.0218].
+  - other_buffers: 1.6245× [1.6201, 1.6287].
+
+### shape_m8193_k8193_n8193__float32
+
+- S1: S1 outputs; [1024, 512, 8704]; b2; confirmed 2.6470 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9967× [0.9943, 0.9988].
+  - other_buffers: 1.4839× [1.4810, 1.4870].
+- S2: S2 products; [1024, 1024, 8704]; b2; confirmed 3.1234 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0084× [1.0067, 1.0100].
+  - other_buffers: 1.4136× [1.4117, 1.4156].
+
+### shape_m8193_k8193_n8193__bfloat16
+
+- S1: S1 products; [1024, 512, 8704]; b2; confirmed 2.4568 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0023× [0.9988, 1.0063].
+  - other_buffers: 1.4853× [1.4817, 1.4892].
+- S2: S2 products; [1024, 1024, 8704]; b2; confirmed 2.9109 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9998× [0.9967, 1.0022].
+  - other_buffers: 1.4116× [1.4084, 1.4149].
+
+### shape_m1024_k12288_n49152__float32
+
+- S1: S1 outputs; [1024, 512, 12288]; b2; confirmed 1.5598 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9947× [0.9914, 0.9975].
+  - other_buffers: 1.6629× [1.6551, 1.6708].
+- S2: S2 products; [1024, 1024, 12288]; b2; confirmed 1.8671 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0077× [1.0055, 1.0101].
+  - other_buffers: 1.5039× [1.5007, 1.5076].
+
+### shape_m1024_k12288_n49152__bfloat16
+
+- S1: S1 outputs; [1024, 512, 12288]; b2; confirmed 1.5778 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9986× [0.9910, 1.0054].
+  - other_buffers: 1.6089× [1.6000, 1.6170].
+- S2: S2 products; [1024, 1024, 12288]; b2; confirmed 1.8865 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9958× [0.9935, 0.9980].
+  - other_buffers: 1.4599× [1.4565, 1.4631].
+
+### shape_m1024_k24576_n24576__float32
+
+- S1: S1 outputs; [1024, 512, 24576]; b2; confirmed 1.5638 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9950× [0.9929, 0.9973].
+  - other_buffers: 1.5808× [1.5699, 1.5973].
+- S2: S2 products; [1024, 2048, 6144]; b2; confirmed 1.9510 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0233× [1.0193, 1.0279].
+  - other_buffers: 1.6218× [1.6179, 1.6256].
+
+### shape_m1024_k24576_n24576__bfloat16
+
+- S1: S1 products; [1024, 512, 24576]; b2; confirmed 1.5806 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9979× [0.9951, 1.0007].
+  - other_buffers: 1.5434× [1.5375, 1.5482].
+- S2: S2 products; [1024, 1024, 6144]; b2; confirmed 1.9708 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0165× [1.0112, 1.0210].
+  - other_buffers: 1.8065× [1.7917, 1.8267].
+
+### shape_m3072_k65536_n3072__float32
+
+- S1: S1 products; [1024, 1024, 1024]; b2; confirmed 2.0731 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0796× [1.0765, 1.0822].
+  - other_buffers: 1.8491× [1.8437, 1.8534].
+- S2: S2 products; [1024, 1024, 1024]; b2; confirmed 2.2884 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1235× [1.1213, 1.1256].
+  - other_buffers: 1.8618× [1.8585, 1.8647].
+
+### shape_m3072_k65536_n3072__bfloat16
+
+- S1: S1 products; [1024, 1024, 1024]; b2; confirmed 2.0687 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0297× [1.0273, 1.0326].
+  - other_buffers: 1.8471× [1.8411, 1.8524].
+- S2: S2 products; [1024, 1024, 1024]; b2; confirmed 2.2799 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1005× [1.0885, 1.1285].
+  - other_buffers: 1.8631× [1.8516, 1.8692].
+
+### shape_m24576_k8192_n3072__float32
+
+- S1: S1 products; [4096, 1024, 2048]; b2; confirmed 1.7834 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0305× [1.0279, 1.0331].
+  - other_buffers: 1.6288× [1.6241, 1.6335].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.7951 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0954× [1.0916, 1.0988].
+  - other_buffers: 1.6125× [1.6080, 1.6170].
+
+### shape_m24576_k8192_n3072__bfloat16
+
+- S1: S1 products; [4096, 1024, 2048]; b2; confirmed 1.6357 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0234× [1.0212, 1.0260].
+  - other_buffers: 1.7012× [1.6927, 1.7101].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 1.6534 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0494× [1.0395, 1.0545].
+  - other_buffers: 1.6734× [1.6560, 1.6837].
+
+### shape_m9216_k9216_n9216__float32
+
+- S1: S1 products; [1024, 512, 9216]; b2; confirmed 2.0017 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0098× [1.0069, 1.0131].
+  - other_buffers: 1.7356× [1.7302, 1.7427].
+- S2: S2 products; [1024, 1024, 9216]; b2; confirmed 2.3543 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0131× [1.0096, 1.0156].
+  - other_buffers: 1.5724× [1.5656, 1.5775].
+
+### shape_m9216_k9216_n9216__bfloat16
+
+- S1: S1 outputs; [1024, 512, 9216]; b2; confirmed 2.0060 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9996× [0.9928, 1.0045].
+  - other_buffers: 1.6693× [1.6561, 1.6778].
+- S2: S2 products; [1024, 1024, 9216]; b2; confirmed 2.3298 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9971× [0.9931, 1.0005].
+  - other_buffers: 1.5464× [1.5354, 1.5714].
+
+### shape_m2048_k6144_n65536__float32
+
+- S1: S1 products; [2048, 1024, 6144]; b2; confirmed 1.9521 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0057× [1.0028, 1.0079].
+  - other_buffers: 1.4989× [1.4948, 1.5037].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 2.0539 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0175× [1.0003, 1.0456].
+  - other_buffers: 1.4699× [1.4592, 1.4816].
+
+### shape_m2048_k6144_n65536__bfloat16
+
+- S1: S1 outputs; [1024, 512, 6144]; b2; confirmed 2.0507 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0045× [1.0019, 1.0071].
+  - other_buffers: 1.7167× [1.7127, 1.7209].
+- S2: S2 outputs; [2048, 1024, 6144]; b2; confirmed 2.0389 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0028× [1.0005, 1.0051].
+  - other_buffers: 1.3774× [1.3736, 1.3814].
+
+### shape_m16384_k4096_n12288__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 2.0175 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6060× [1.6024, 1.6098].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 2.1796 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5507× [1.5479, 1.5537].
+
+### shape_m16384_k4096_n12288__bfloat16
+
+- S1: S1 products; [2048, 2048, 4096]; b2; confirmed 1.9749 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0021× [0.9987, 1.0058].
+  - other_buffers: 1.4762× [1.4739, 1.4784].
+- S2: S2 outputs; [2048, 1024, 4096]; b2; confirmed 2.1843 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9987× [0.9720, 1.0097].
+  - other_buffers: 1.4468× [1.4099, 1.4610].
+
+### shape_m49152_k4096_n4096__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 2.0323 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6847× [1.6814, 1.6879].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 2.1986 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6181× [1.6153, 1.6207].
+
+### shape_m49152_k4096_n4096__bfloat16
+
+- S1: S1 products; [2048, 2048, 4096]; b2; confirmed 1.9667 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0004× [0.9983, 1.0023].
+  - other_buffers: 1.5680× [1.5642, 1.5732].
+- S2: S2 outputs; [2048, 1024, 4096]; b2; confirmed 2.1630 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0061× [1.0036, 1.0088].
+  - other_buffers: 1.5350× [1.5321, 1.5379].
+
+### shape_m12288_k49152_n1536__float32
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 3.2552 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1522× [1.1505, 1.1541].
+  - other_buffers: 1.6934× [1.6900, 1.6975].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 3.8307 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0928× [1.0905, 1.0951].
+  - other_buffers: 1.4635× [1.4612, 1.4656].
+
+### shape_m12288_k49152_n1536__bfloat16
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 3.1655 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0252× [1.0227, 1.0276].
+  - other_buffers: 1.7164× [1.7139, 1.7187].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 3.7420 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1346× [1.1329, 1.1360].
+  - other_buffers: 1.4803× [1.4784, 1.4820].
+
+### shape_m10240_k10240_n10240__float32
+
+- S1: S1 products; [1024, 512, 10240]; b2; confirmed 2.6303 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0071× [1.0043, 1.0103].
+  - other_buffers: 1.7316× [1.7277, 1.7352].
+- S2: S2 outputs; [2048, 1024, 5120]; b2; confirmed 2.9104 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0019× [1.0005, 1.0032].
+  - other_buffers: 1.7881× [1.7853, 1.7904].
+
+### shape_m10240_k10240_n10240__bfloat16
+
+- S1: S1 outputs; [1024, 2560, 5120]; b2; confirmed 2.5303 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0020× [1.0002, 1.0039].
+  - other_buffers: 1.8308× [1.8266, 1.8358].
+- S2: S2 products; [2048, 1024, 5120]; b2; confirmed 2.7221 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0148× [1.0113, 1.0181].
+  - other_buffers: 1.8128× [1.8047, 1.8197].
+
+### shape_m8192_k8192_n16383__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 3.0464 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5865× [1.5846, 1.5884].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 3.2913 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0922× [1.0910, 1.0936].
+  - other_buffers: 1.5897× [1.5881, 1.5917].
+
+### shape_m8192_k8192_n16383__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 2.9934 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5372× [1.5346, 1.5397].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 3.0632 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0527× [1.0508, 1.0545].
+  - other_buffers: 1.6409× [1.6374, 1.6452].
+
+### shape_m8192_k16383_n8192__float32
+
+- S1: S1 outputs; [1024, 512, 16384]; b2; confirmed 3.4440 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9967× [0.9954, 0.9980].
+  - other_buffers: 1.4945× [1.4927, 1.4961].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 5.9189 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.2383× [1.2372, 1.2394].
+  - other_buffers: 1.3590× [1.3575, 1.3604].
+
+### shape_m8192_k16383_n8192__bfloat16
+
+- S1: S1 outputs; [1024, 512, 16384]; b2; confirmed 3.4236 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0009× [0.9990, 1.0032].
+  - other_buffers: 1.4749× [1.4710, 1.4782].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 5.8625 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1718× [1.1706, 1.1730].
+  - other_buffers: 1.3716× [1.3701, 1.3731].
+
+### shape_m16383_k8192_n8192__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 3.0822 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5815× [1.5767, 1.5852].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 3.3247 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5255× [1.5222, 1.5292].
+
+### shape_m16383_k8192_n8192__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 3.0055 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5368× [1.5337, 1.5398].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 3.0794 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0512× [1.0489, 1.0532].
+  - other_buffers: 1.6374× [1.6332, 1.6407].
+
+### shape_m8192_k8192_n16385__float32
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 5.1445 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0001× [0.9896, 1.0051].
+  - other_buffers: 1.4212× [1.4073, 1.4282].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 5.4890 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0574× [1.0565, 1.0583].
+  - other_buffers: 1.3757× [1.3741, 1.3772].
+
+### shape_m8192_k8192_n16385__bfloat16
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 4.4050 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9976× [0.9962, 0.9987].
+  - other_buffers: 1.4525× [1.4488, 1.4590].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 4.5272 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0354× [1.0303, 1.0384].
+  - other_buffers: 1.4620× [1.4560, 1.4651].
+
+### shape_m8192_k16385_n8192__float32
+
+- S1: S1 products; [1024, 512, 16896]; b2; confirmed 3.9862 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0031× [0.9997, 1.0110].
+  - other_buffers: 1.4527× [1.4472, 1.4644].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 6.5357 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.2226× [1.2150, 1.2264].
+  - other_buffers: 1.3523× [1.3431, 1.3600].
+
+### shape_m8192_k16385_n8192__bfloat16
+
+- S1: S1 products; [1024, 512, 16896]; b2; confirmed 3.9656 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9997× [0.9987, 1.0008].
+  - other_buffers: 1.4289× [1.4273, 1.4305].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 6.4603 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1645× [1.1634, 1.1657].
+  - other_buffers: 1.3632× [1.3624, 1.3639].
+
+### shape_m16385_k8192_n8192__float32
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 4.0634 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0049× [1.0034, 1.0063].
+  - other_buffers: 1.5252× [1.5235, 1.5266].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 4.4011 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.4485× [1.4473, 1.4497].
+
+### shape_m16385_k8192_n8192__bfloat16
+
+- S1: S1 products; [1024, 512, 8192]; b2; confirmed 3.6886 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9924× [0.9750, 1.0020].
+  - other_buffers: 1.5285× [1.5043, 1.5385].
+- S2: S2 products; [2048, 2048, 2048]; b2; confirmed 3.9575 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0400× [1.0382, 1.0416].
+  - other_buffers: 1.4663× [1.4641, 1.4685].
+
+### shape_m3072_k131072_n3072__float32
+
+- S1: S1 products; [1024, 1024, 1024]; b2; confirmed 3.8717 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0827× [1.0813, 1.0839].
+  - other_buffers: 1.9123× [1.9092, 1.9151].
+- S2: S2 products; [1024, 1024, 1024]; b2; confirmed 4.3143 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1302× [1.1281, 1.1323].
+  - other_buffers: 1.9116× [1.9077, 1.9147].
+
+### shape_m3072_k131072_n3072__bfloat16
+
+- S1: S1 products; [1024, 1024, 1024]; b2; confirmed 3.8588 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0369× [1.0277, 1.0557].
+  - other_buffers: 1.9163× [1.9102, 1.9212].
+- S2: S2 products; [1024, 1024, 1024]; b2; confirmed 4.2975 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1043× [1.1014, 1.1073].
+  - other_buffers: 1.9150× [1.9106, 1.9194].
+
+### shape_m8192_k12288_n12288__float32
+
+- S1: S1 products; [2048, 2048, 3072]; b2; confirmed 2.9128 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0462× [1.0449, 1.0475].
+  - other_buffers: 1.6598× [1.6578, 1.6620].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 3.1842 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0090× [1.0057, 1.0146].
+  - other_buffers: 1.7704× [1.7681, 1.7732].
+
+### shape_m8192_k12288_n12288__bfloat16
+
+- S1: S1 products; [2048, 2048, 3072]; b2; confirmed 2.9034 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9976× [0.9805, 1.0047].
+  - other_buffers: 1.6225× [1.5957, 1.6473].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 3.0003 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0120× [1.0093, 1.0139].
+  - other_buffers: 1.8304× [1.8265, 1.8341].
+
+### shape_m12288_k8192_n12288__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 2.9890 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6815× [1.6792, 1.6838].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 3.2787 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1045× [1.1024, 1.1066].
+  - other_buffers: 1.6698× [1.6675, 1.6720].
+
+### shape_m12288_k8192_n12288__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 2.9215 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6243× [1.6195, 1.6280].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 3.0132 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0556× [1.0458, 1.0622].
+  - other_buffers: 1.7373× [1.7200, 1.7482].
+
+### shape_m12288_k12288_n8192__float32
+
+- S1: S1 products; [2048, 2048, 3072]; b2; confirmed 2.9188 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0471× [1.0437, 1.0502].
+  - other_buffers: 1.6594× [1.6565, 1.6625].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 3.1821 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0057× [1.0037, 1.0074].
+  - other_buffers: 1.7683× [1.7653, 1.7710].
+
+### shape_m12288_k12288_n8192__bfloat16
+
+- S1: S1 products; [4096, 1024, 3072]; b2; confirmed 2.8520 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0107× [1.0063, 1.0144].
+  - other_buffers: 1.7697× [1.7661, 1.7727].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 2.9948 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0135× [1.0102, 1.0165].
+  - other_buffers: 1.8301× [1.8234, 1.8366].
+
+### shape_m32768_k24576_n1536__float32
+
+- S1: S1 products; [2048, 1024, 6144]; b2; confirmed 4.2850 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0110× [1.0099, 1.0121].
+  - other_buffers: 1.7680× [1.7599, 1.7862].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 4.3641 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0360× [1.0345, 1.0376].
+  - other_buffers: 1.7372× [1.7349, 1.7394].
+
+### shape_m32768_k24576_n1536__bfloat16
+
+- S1: S1 products; [2048, 1024, 6144]; b2; confirmed 4.0257 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0070× [1.0048, 1.0088].
+  - other_buffers: 1.8170× [1.8125, 1.8200].
+- S2: S2 products; [2048, 1024, 6144]; b2; confirmed 4.1158 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0194× [1.0163, 1.0212].
+  - other_buffers: 1.7864× [1.7806, 1.7902].
+
+### shape_m11264_k11264_n11264__float32
+
+- S1: S1 products; [1024, 512, 11264]; b2; confirmed 3.3608 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0089× [1.0074, 1.0109].
+  - other_buffers: 1.7459× [1.7416, 1.7510].
+- S2: S2 products; [1024, 1024, 11264]; b2; confirmed 3.9687 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0125× [1.0101, 1.0143].
+  - other_buffers: 1.5815× [1.5759, 1.5861].
+
+### shape_m11264_k11264_n11264__bfloat16
+
+- S1: S1 outputs; [1024, 512, 11264]; b2; confirmed 3.3377 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0012× [0.9997, 1.0026].
+  - other_buffers: 1.6973× [1.6945, 1.6999].
+- S2: S2 products; [1024, 1024, 11264]; b2; confirmed 3.9166 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9972× [0.9914, 1.0002].
+  - other_buffers: 1.5547× [1.5451, 1.5590].
+
+### shape_m4096_k131072_n3072__float32
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 3.7166 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1825× [1.1801, 1.1847].
+  - other_buffers: 1.7996× [1.7951, 1.8038].
+- S2: S2 products; [4096, 1024, 1024]; b2; confirmed 4.5862 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.2209× [1.2197, 1.2220].
+  - other_buffers: 1.6262× [1.6236, 1.6286].
+
+### shape_m4096_k131072_n3072__bfloat16
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 3.7068 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0262× [1.0246, 1.0282].
+  - other_buffers: 1.8030× [1.8008, 1.8053].
+- S2: S2 products; [4096, 1024, 1024]; b2; confirmed 4.5826 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1471× [1.1408, 1.1619].
+  - other_buffers: 1.6267× [1.6246, 1.6284].
+
+### shape_m4096_k65536_n8192__float32
+
+- S1: S1 products; [2048, 2048, 1024]; b2; confirmed 4.9365 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1640× [1.1590, 1.1757].
+  - other_buffers: 1.6723× [1.6705, 1.6740].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 5.9433 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1108× [1.1093, 1.1137].
+  - other_buffers: 1.5448× [1.5436, 1.5461].
+
+### shape_m4096_k65536_n8192__bfloat16
+
+- S1: S1 products; [4096, 1024, 1024]; b2; confirmed 4.8951 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0252× [1.0241, 1.0266].
+  - other_buffers: 1.8119× [1.8099, 1.8138].
+- S2: S2 products; [2048, 2048, 1024]; b2; confirmed 5.9100 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1548× [1.1537, 1.1558].
+  - other_buffers: 1.5526× [1.5516, 1.5536].
+
+### shape_m8192_k16384_n16384__float32
+
+- S1: S1 products; [1024, 512, 16384]; b2; confirmed 4.9194 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0017× [1.0006, 1.0029].
+  - other_buffers: 1.6988× [1.6955, 1.7015].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 5.4982 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5725× [1.5710, 1.5740].
+
+### shape_m8192_k16384_n16384__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 4.8837 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6267× [1.6245, 1.6289].
+- S2: S2 products; [2048, 1024, 4096]; b2; confirmed 5.3022 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0340× [1.0280, 1.0400].
+  - other_buffers: 1.8362× [1.8261, 1.8441].
+
+### shape_m16384_k8192_n16384__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 5.0517 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.7198× [1.7175, 1.7224].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 5.5392 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6387× [1.6363, 1.6403].
+
+### shape_m16384_k8192_n16384__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 4.9481 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6607× [1.6555, 1.6664].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 5.1100 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0618× [1.0606, 1.0631].
+  - other_buffers: 1.7794× [1.7768, 1.7829].
+
+### shape_m16384_k16384_n8192__float32
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 5.0102 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6453× [1.6431, 1.6471].
+- S2: S2 outputs; [2048, 2048, 4096]; b2; confirmed 5.4855 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.5739× [1.5726, 1.5751].
+
+### shape_m16384_k16384_n8192__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 4.8987 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6258× [1.6234, 1.6302].
+- S2: S2 products; [2048, 1024, 4096]; b2; confirmed 5.3079 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0350× [1.0340, 1.0361].
+  - other_buffers: 1.8387× [1.8368, 1.8407].
+
+### shape_m14336_k14336_n14336__float32
+
+- S1: S1 products; [1024, 512, 14336]; b2; confirmed 6.5680 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0044× [1.0035, 1.0052].
+  - other_buffers: 1.7442× [1.7429, 1.7452].
+- S2: S2 outputs; [2048, 1024, 7168]; b2; confirmed 7.1311 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.8531× [1.8514, 1.8546].
+
+### shape_m14336_k14336_n14336__bfloat16
+
+- S1: S1 products; [2048, 2048, 3584]; b2; confirmed 6.3865 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0111× [1.0095, 1.0127].
+  - other_buffers: 1.6813× [1.6788, 1.6842].
+- S2: S2 outputs; [2048, 1024, 7168]; b2; confirmed 6.8297 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.8687× [1.8611, 1.8743].
+
+### shape_m15360_k15360_n15360__float32
+
+- S1: S1 products; [1024, 512, 15360]; b2; confirmed 7.8992 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0057× [1.0012, 1.0081].
+  - other_buffers: 1.7582× [1.7503, 1.7626].
+- S2: S2 products; [1024, 2560, 3072]; b2; confirmed 10.2323 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0662× [1.0653, 1.0671].
+  - other_buffers: 1.7301× [1.7288, 1.7318].
+
+### shape_m15360_k15360_n15360__bfloat16
+
+- S1: S1 products; [1024, 512, 15360]; b2; confirmed 7.8885 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9984× [0.9973, 0.9992].
+  - other_buffers: 1.7184× [1.7153, 1.7232].
+- S2: S2 products; [1024, 2560, 3072]; b2; confirmed 10.2065 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0422× [1.0417, 1.0428].
+  - other_buffers: 1.6986× [1.6975, 1.6996].
+
+### shape_m16383_k16383_n16383__float32
+
+- S1: S1 outputs; [1024, 512, 16384]; b2; confirmed 11.1280 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9968× [0.9930, 0.9990].
+  - other_buffers: 1.6118× [1.6050, 1.6163].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 21.3070 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.2659× [1.2654, 1.2664].
+  - other_buffers: 1.3994× [1.3985, 1.4006].
+
+### shape_m16383_k16383_n16383__bfloat16
+
+- S1: S1 outputs; [1024, 512, 16384]; b2; confirmed 11.0434 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0003× [0.9996, 1.0010].
+  - other_buffers: 1.5840× [1.5828, 1.5852].
+- S2: S2 products; [4096, 1024, 512]; b2; confirmed 21.0865 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1948× [1.1941, 1.1954].
+  - other_buffers: 1.4118× [1.4113, 1.4123].
+
+### shape_m16384_k16384_n16384__float32
+
+- S1: S1 products; [1024, 512, 16384]; b2; confirmed 9.5695 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0029× [1.0011, 1.0049].
+  - other_buffers: 1.7197× [1.7174, 1.7234].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 10.0942 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.1618× [1.1604, 1.1631].
+  - other_buffers: 1.7505× [1.7485, 1.7544].
+
+### shape_m16384_k16384_n16384__bfloat16
+
+- S1: S1 outputs; [2048, 2048, 4096]; b2; confirmed 9.4561 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+  - other_buffers: 1.6492× [1.6473, 1.6508].
+- S2: S2 products; [4096, 1024, 2048]; b2; confirmed 9.6097 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0813× [1.0808, 1.0818].
+  - other_buffers: 1.7901× [1.7882, 1.7923].
+
+### shape_m16385_k16385_n16385__float32
+
+- S1: S1 products; [1024, 512, 16896]; b2; confirmed 14.2104 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9987× [0.9955, 1.0021].
+  - other_buffers: 1.5462× [1.5428, 1.5497].
+- S2: S2 products; [1024, 1024, 16896]; b1; confirmed 26.7587 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 1.0057× [1.0050, 1.0063].
+  - other_buffers: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+
+### shape_m16385_k16385_n16385__bfloat16
+
+- S1: S1 outputs; [1024, 512, 16896]; b2; confirmed 13.1279 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9992× [0.9950, 1.0014].
+  - other_buffers: 1.5833× [1.5762, 1.5866].
+- S2: S2 outputs; [1024, 1024, 16896]; b1; confirmed 26.0063 ms. Selected by the lowest eligible batch-normalized screening latency across both accumulator strategies, K-panel lengths and buffer counts.
+  - other_accumulator: 0.9996× [0.9972, 1.0005].
+  - other_buffers: comparison ineligible/unavailable; outcomes ['oom', 'oom', 'oom'].
+
 ## Coverage
 
-All planned outcomes present: False.
-{'screen': {'ok': 44444, 'oom': 2695}, 'confirm': {'ok': 9945, 'oom': 60}}
+All planned outcomes present: True.
+{'screen': {'ok': 75755, 'oom': 6362}, 'confirm': {'ok': 14715, 'oom': 282}}
 candidate_decisions.json retains offered/pruned configurations, memory estimates, omitted K divisors, numerical checks, screening anchors, ranks and frozen choices. results.json retains every confirmation arm and comparison, including previous controls. tuner_policy.json is a research recommendation table, not an installed serving dispatcher.
 Compiled HLO and cost metadata are preserved in each phase. Memory estimates are search heuristics; no performance cause is inferred from them alone.
 
