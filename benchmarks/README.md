@@ -1,8 +1,13 @@
-# TPU matrix multiplication benchmarks — final v6e results
+# TPU matrix multiplication and LLM benchmarks
 
-The **168-shape v6e study is complete**, with separate FP32 and BF16 output
-comparisons. The owned TPU was released, the supervisor finished, and the
-recovery monitor was deleted. No subsequent experiments are queued.
+The **168-shape v6e matrix study is complete**, with separate FP32 and BF16 output
+comparisons and its original resource-release evidence preserved.
+
+The separately authorized [v6e LLM campaign](llm/20261004_v001/README.md) is now
+running. Its October 4 snapshot includes **75/200 completed BF16 comparisons**,
+current versioned code, frozen measurement bundles, tuning choices and numerical
+errors. Gemma4 is still awaiting real-checkpoint/runtime qualification.
+The matrix results below remain unchanged.
 
 | Study | Saved measurements | Status |
 |---|---|---|
