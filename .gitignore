@@ -2,5 +2,7 @@ __pycache__/
 *.py[cod]
 tmp/
 runs/
+results/
 job.json
+.pytest_cache/
 .DS_Store

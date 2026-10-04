@@ -87,7 +87,8 @@ Strassen, the ordinary-XLA comparison remains the deployment-facing control.
 ## Evidence
 
 The exact JSONL artifacts and SHA-256 values are indexed in
-[`../evidence/qwen3/README.md`](../evidence/qwen3/README.md). The broader
+[`../evidence/qwen3/README.md`](../evidence/qwen3/README.md) and
+[`../evidence/gemma3/README.md`](../evidence/gemma3/README.md). The broader
 post-snapshot search, including most failed Qwen3 scheduling probes, stays on
 the research branch and is intentionally absent from this public update.
 
@@ -159,3 +160,127 @@ policy. The harnesses differ in arm count, sample budget and when the q/k
 layouts are materialised; the gap is unexplained and should not be read as
 the fusion improving with depth.
 
+
+
+## Gemma 3 27B: generalisation to a second family
+
+Added 2026-10-03. Same protocol throughout: same-run arms on one chip,
+compilation excluded, raw samples retained.
+
+Gemma 3 27B was picked because it is harder for this kernel than Qwen3 in
+four concrete ways — four norms per block rather than two, `(1 + w)` RMSNorm
+rather than `w`, GeGLU rather than SwiGLU, and 5:1 sliding/global attention
+carrying two RoPE bases (`10000` and `1000000` with a linear factor of 8). It
+also ties `embed_tokens` as the head and scales embeddings by
+`sqrt(hidden_size)`.
+
+Before any timing, `tools/reference_fidelity.py` ran one real decoder layer
+through `transformers` and through our formulation, CPU, FP32. Both Gemma and
+Qwen reach l2 `0.0`, max_abs `0.0` — bit-exact. The tool was wrong first: with
+`attention_mask=None` HF eager attention is bidirectional, which reported l2
+`1.079` for a block that is exact.
+
+### Layer-0 block, real weights
+
+8 x 1024 tokens, tile `(1024, 768, 5376)`, kernel budget 104 MiB,
+`--xla_tpu_scoped_vmem_limit_kib=49152`.
+
+| Device | Policy | XLA | best Strassen | Ratio |
+|---|---|---:|---:|---:|
+| v5e | gate/up + GeGLU, fused q/k | `49.798 ms` | `43.015 ms` | `1.1577x` |
+| v5e | gate/up + GeGLU only | `49.743 ms` | `46.139 ms` | `1.0781x` |
+| v6e | gate/up + GeGLU, fused q/k | `14.884 ms` | `13.173 ms` | `1.1299x` |
+
+The fused `q_norm`+RoPE epilogue is worth 8 points on Gemma, the same as on
+Qwen3. Gemma puts its per-head RMSNorm in the same place, so the fusable unit
+is the same shape, and the finding travels.
+
+We predicted Gemma would finish *below* Qwen3, because its norms sit between
+`o`/`down` and their residual adds and so block the fusion that wins those
+sites on Qwen3. It matched instead: `1.1577x` against `1.1566x`. Recorded as
+a wrong prediction, not a confirmation.
+
+### A refuted epilogue, retained
+
+If a norm blocks the `o`/`down` residual fusion, the apparent fix is to fuse
+the norm too. `norm_residual_add` does that. It loses:
+
+| Policy | XLA | best Strassen | Ratio |
+|---|---:|---:|---:|
+| o/down left to XLA | `49.740 ms` | `42.997 ms` | `1.1568x` |
+| o/down routed, `norm_residual_add` | `49.758 ms` | `45.898 ms` | `1.0841x` |
+
+**7.3 points worse.** The epilogue needs a row sum-of-squares across the full
+output width, which forces `bn == n` and surrenders the tile freedom the
+gate/up site depends on. The traffic saved was never going to pay for that:
+the ceiling on the entire manoeuvre was about 1% of the block, and we did not
+compute it before building the epilogue. Reproduce with `--norm-residual`.
+
+The general rule this yields is sharper than "fuse the epilogue or don't route
+the site": a fusable unit is only worth fusing if its reduction axis fits
+inside the tile. `qk_norm_rope` reduces over `head_dim=128` and fits.
+`norm_residual_add` reduces over the output width and does not.
+
+### All layers streamed, 62 layers
+
+Repetitive corpus, gate/up only, v5e: top-1 agreement `0.99890`, mean KL
+`2.36e-5` nats, absolute loss delta `1.00e-4`. Gate passes.
+
+Two gates are published **failing**, and both predate the BOS fix below:
+
+| Gate | Threshold | Strassen | Verdict |
+|---|---:|---:|---|
+| WikiText-2 streamed top-1 | `0.97` | `0.96215` | fails |
+| WikiText-2, task records only | `0.97` | `0.95910` | fails |
+| HellaSwag choice agreement | `0.97` | `0.9875` | passes |
+| LAMBADA greedy agreement | `0.97` | `0.9625` | fails |
+
+Native top-1 on the WikiText-2 arm is `0.3952` — a near-flat output
+distribution, the regime in which an agreement metric is maximally sensitive
+to any perturbation. That flatness was itself the BOS defect. These runs are
+retained as failures and are **pending re-run**; they are not evidence that
+Gemma fails quality.
+
+## Scoring under the published harness
+
+Added 2026-10-03. Every quality number above is produced by our own scoring
+code. That is sufficient to detect a defect in one arm and structurally
+incapable of detecting a defect in both.
+
+`experiments/lm_eval/` registers the streamed model with
+lm-evaluation-harness as the model type `strassen`, so the reference harness
+owns tokenisation, prompt construction, scoring and metric choice, and we
+supply only a forward pass. HellaSwag, `--limit 200`, 256-token contexts:
+
+| Arm | acc | acc_norm |
+|---|---:|---:|
+| `regular_xla` | `0.580` | `0.745` |
+| `gated_strassen` | `0.580` | `0.745` |
+
+Zero delta on both metrics. `acc_norm` is the character-length-normalised
+metric the published tables report; `acc` is included because reporting the
+wrong one of the two was an earlier error here.
+
+Against a published `~0.85`, `0.745` leaves about `1.7` sigma at n=200 (one
+sigma is `0.031`) plus two systematics we do not correct: this is the `-it`
+checkpoint rather than the base model, and contexts are truncated to 256
+tokens to keep a 54 GB streamed forward pass affordable.
+
+### The defect it found
+
+The first run under the harness scored `acc_norm 0.460`. The cause was a
+missing BOS token. Gemma is trained with a leading `<bos>` and collapses
+toward a flat output distribution without one; lm-eval's own HF model
+prepends it, so a wrapper that omits it is not running the published
+protocol. Adding it moved the score to `0.745` — **+28.5 points**, far larger
+than any effect this project has measured from the kernel itself.
+
+Nothing in this repository could have caught it. Both arms omitted the token
+identically, so it cancels *exactly* in any agreement metric: WikiText-2
+top-1, downstream choice agreement, per-layer divergence, block error norms.
+All were structurally blind to it, and two of them were reporting failures
+caused by the handicap rather than by the kernel.
+
+The standing lesson: self-consistency gates catch kernel defects; only an
+external anchor catches protocol defects. This project had thorough coverage
+of the first kind and none of the second, and the second found more.

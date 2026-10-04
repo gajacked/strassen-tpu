@@ -1,0 +1,15 @@
+{
+  "arm": "gated_strassen",
+  "limit": 200,
+  "model": "gemma3-27b",
+  "results": {
+    "hellaswag": {
+      "acc,none": 0.58,
+      "acc_norm,none": 0.745,
+      "acc_norm_stderr,none": "N/A",
+      "acc_stderr,none": "N/A",
+      "alias": "hellaswag"
+    }
+  },
+  "sequence": 256
+}
