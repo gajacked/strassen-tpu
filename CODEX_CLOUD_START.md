@@ -1,7 +1,11 @@
 # Continue this project in Codex Cloud
 
-Repository: `sarsid/strassen-tpu`.
+Repository for Codex Cloud: `gajacked/strassen-tpu`.
+Upstream research publication: `sarsid/strassen-tpu`.
 Branch: `codex/benchmarks-20260929`.
+
+Use this fork when selecting a repository in Codex Cloud. Archived snapshot
+notes retain the upstream repository name as publication provenance.
 
 Read the [October 5 handoff](benchmarks/llm/20261005_v001/README.md) for current
 code, all 80 completed BF16 comparisons, the timing-scope report, source/evidence
